@@ -1,3 +1,4 @@
+import HeroSection from "@/app/features/home/components/HeroSection";
 import { getTranslations } from "next-intl/server";
 
 export default async function HomePage() {
@@ -5,10 +6,9 @@ export default async function HomePage() {
 
   return (
     <>
-      <section className={"py-10"}>
-        {t("title")}
-        {/* HeroSection */}
-      </section>
+      <main className={"py-10"}>
+        <HeroSection />
+      </main>
     </>
   );
 }
