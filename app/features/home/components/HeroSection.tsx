@@ -8,11 +8,11 @@ export default function HeroSection() {
       <section
         className={cn(
           "hero-sec",
-          "relative w-full h-[calc(100svh-84px)] min-h-96 overflow-hidden flex items-center justify-center font-sans rounded-2xl",
-          "bg-cover"
+          "relative w-full h-[calc(100svh-84px)] min-h-96 overflow-hidden flex items-center justify-center font-sans",
+          "bg-cover",
         )}
         style={{
-            backgroundImage: `url("/images/hero/hero-bg.jpg")`
+          backgroundImage: `url("/images/hero/hero-bg.jpg")`,
         }}
         aria-labelledby="hero-title"
       >
@@ -36,7 +36,6 @@ export default function HeroSection() {
     </>
   );
 }
-
 
 /* 
 Build a HeroSection background image to a company called "Dewan Consulting" and this company systems are FreightAccount, Payroll System, Time Attendance, Withholding Tax System and HR System, Tailored Projects, Project Management, and General Ledger.

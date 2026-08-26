@@ -6,7 +6,7 @@ export default async function HomePage() {
 
   return (
     <>
-      <main className={"py-10"}>
+      <main className={""}>
         <HeroSection />
       </main>
     </>
