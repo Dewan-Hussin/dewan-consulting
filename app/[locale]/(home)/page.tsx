@@ -1,3 +1,4 @@
+import AboutUs from "@/app/features/home/components/AboutUs";
 import HeroSection from "@/app/features/home/components/HeroSection";
 import { getTranslations } from "next-intl/server";
 
@@ -8,6 +9,7 @@ export default async function HomePage() {
     <>
       <main className={""}>
         <HeroSection />
+        <AboutUs />
       </main>
     </>
   );

@@ -6,20 +6,26 @@ export default function HeroSection() {
   return (
     <>
       <section
+        id="hero"
         className={cn(
           "hero-sec",
-          "relative w-full h-[calc(100svh-84px)] min-h-96 overflow-hidden flex items-center justify-center font-sans",
-          "bg-cover",
+          "relative w-full  min-h-96 overflow-hidden flex items-center justify-center font-sans",
+          "bg-cover bg-center ",
+          "bg-fixed",
+          "h-svh",
+          "relative",
+          // "h-[calc(100svh-64px)]",
         )}
         style={{
-          backgroundImage: `url("/images/hero/hero-bg.jpg")`,
+          backgroundImage: `url("/images/hero/hero-bg.webp")`,
         }}
         aria-labelledby="hero-title"
       >
-        <div className={cn("hero-content", "space-y-4")}>
+        <div className="absolute inset-0 bg-black/10 z-10 " />
+        <div className={cn("hero-content", "space-y-4", "text-center z-30")}>
           <h1 id="hero-title">
             <span
-              className={`block text-5xl md:text-6xl text-slate-100 lg:text-7xl font-bold tracking-tight animate-in slide-in-from-bottom-8 duration-700 fade-in delay-15`}
+              className={`block text-4xl md:text-6xl text-slate-100 lg:text-7xl font-bold tracking-tight animate-in slide-in-from-bottom-8 duration-700 fade-in delay-15`}
             >
               Dewan Consulting
             </span>

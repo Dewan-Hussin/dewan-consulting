@@ -2,7 +2,9 @@
 
 import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
+import { Menu, X } from "lucide-react";
 import Image from "next/image";
+import { useState } from "react";
 
 const navLinks = [
   {
@@ -24,10 +26,18 @@ const navLinks = [
 ];
 
 export default function Navbar() {
+  const [isMenu, setIsMenu] = useState(false);
+
   return (
     <>
-      <header>
-        <nav className="sticky top-0 z-50 w-full bg-linear-to-r from-[#000E23] via-[#032F45] to-[#0A4A59] backdrop-blur-md shadow-sm">
+      <header className="fixed top-0 w-full z-50">
+        <nav
+          className={cn(
+            " backdrop-blur-xs shadow-sm",
+            " bg-linear-to-r from-[#000205] via-[#063147] to-[#0b4a58]/80",
+            // "fixed"
+          )}
+        >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-16">
               {/* Logo / Brand */}
@@ -38,6 +48,7 @@ export default function Navbar() {
                 >
                   <div className=" p-2 rounded-lg">
                     <Image
+                      style={{ width: "auto", height: "auto" }}
                       src="/images/navbar/logo.png"
                       width={25}
                       height={25}
@@ -68,6 +79,19 @@ export default function Navbar() {
                     {link.label}
                   </Link>
                 ))}
+              </div>
+
+              {/* Right Section */}
+              <div className="flex items-center gap-4">
+                <button
+                  onClick={() => setIsMenu(!isMenu)}
+                  className="block lg:hidden"
+                >
+                  {!isMenu && <Menu color="white" />}
+                  {isMenu && <X color="white" />}
+                </button>
+
+                {/* <LanguageSwitcher /> */}
               </div>
             </div>
           </div>
