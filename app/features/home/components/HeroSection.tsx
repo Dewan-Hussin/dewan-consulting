@@ -9,7 +9,7 @@ export default function HeroSection() {
         id="hero"
         className={cn(
           "hero-sec",
-          "relative w-full  min-h-96 overflow-hidden flex items-center justify-center font-sans",
+          "relative w-full min-h-96 overflow-hidden flex items-center justify-center font-sans",
           "bg-cover bg-center ",
           "bg-fixed",
           "h-svh",

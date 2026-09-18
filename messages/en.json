@@ -1,5 +1,14 @@
 {
   "HomePage": {
-    "title": "Hello world!"
+    "hero-sec": {
+      "title": "Dewan Consulting",
+      "sub-title": "Support Your Business"
+    },
+    "our-company-sec": {
+      "title": "Dewan Consulting",
+      "sub-title": "Support Your Business",
+      "description": "Support Your Business"
+    },
+    "about-us-sec": {}
   }
 }
