@@ -12,15 +12,15 @@ const navLinks = [
     label: "Home",
   },
   {
-    href: "/company",
-    label: "Company",
+    href: "/about-us",
+    label: "About Us",
   },
   {
     href: "/services",
     label: "Services",
   },
   {
-    href: "/contactUs",
+    href: "/contact-us",
     label: "Contact Us",
   },
 ];
