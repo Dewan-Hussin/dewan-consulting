@@ -34,7 +34,7 @@ export default function Navbar() {
         <nav
           className={cn(
             " backdrop-blur-xs shadow-sm",
-            " bg-linear-to-r from-[#000205] via-[#063147] to-[#0b4a58]/80",
+            " bg-navy-900 ",
             // "fixed"
           )}
         >
