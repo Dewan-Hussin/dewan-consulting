@@ -1,6 +1,7 @@
 import { Button, buttonVariants } from "@/components/ui/button";
 import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 
@@ -12,7 +13,7 @@ export default function AboutUs() {
         className={cn(
           "aboutUs-sec",
           "relative w-full overflow-hidden font-sans ",
-          " bg-[#000205] ",
+          " bg-navy-950 ",
           // "bg-linear-to-r from-[#000205] via-[#000205]/90 to-[#000205]/80",
           //   "bg-white",
           "py-16",
@@ -43,7 +44,7 @@ export default function AboutUs() {
             </h2>
             <p>
               <span
-                className={`block text-[#157a91] text-sm md:text-md lg:text-lg leading-relaxed max-w-2xl font-medium animate-in slide-in-from-bottom-6 duration-700 fade-in delay-300 `}
+                className={`block text-brand text-sm md:text-md lg:text-lg leading-relaxed max-w-2xl font-medium animate-in slide-in-from-bottom-6 duration-700 fade-in delay-300 `}
               >
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo,
                 ad?
@@ -62,13 +63,18 @@ export default function AboutUs() {
 
             <div>
               <Link
-                href={"/company"}
+                href={"/about-us"}
                 className={cn(
-                  "text-white bg-[#157a91]",
                   buttonVariants({ variant: "link", size: "sm" }),
+                  "hover:no-underline hover:bg-brand/70 group",
+                  "text-white bg-brand text-xs",
                 )}
               >
-                See More
+                See more
+                <span className="group-hover:translate-x-1 transition-transform duration-300 ">
+                  {" "}
+                  <ArrowRight />{" "}
+                </span>
               </Link>
             </div>
           </div>

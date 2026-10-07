@@ -15,7 +15,7 @@ export function SectionEyebrow({
     <p
       className={cn(
         "flex items-center gap-3 text-[0.7rem] font-semibold uppercase tracking-[0.22em]",
-        onDark ? "text-brand-bright" : "text-brand",
+        onDark ? "text-brand-bright" : "text-slate-600",
         className,
       )}
     >
@@ -24,7 +24,7 @@ export function SectionEyebrow({
         aria-hidden
         className={cn(
           "h-px w-8",
-          onDark ? "bg-brand-bright/60" : "bg-brand/50",
+          onDark ? "bg-brand-bright/60" : "bg-slate-900",
         )}
       />
       <span>{label}</span>
