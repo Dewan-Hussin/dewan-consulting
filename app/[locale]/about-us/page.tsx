@@ -11,7 +11,9 @@ export default function CompanyPage() {
   return (
     <main>
       <AboutHero />
-      {/* <Ticker />
+      <Ticker />
+      
+      {/* 
       <StorySection />
       <StatsBand />
       <PrinciplesSection />

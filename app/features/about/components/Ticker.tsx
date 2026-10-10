@@ -15,7 +15,7 @@ export default function Ticker() {
   return (
     <section
       aria-hidden
-      className="relative overflow-hidden border-y border-white/10 bg-navy-900 py-4 [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]"
+      className="relative overflow-hidden border-y border-white/10 bg-navy-900 py-4 mask-[linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]"
     >
       <div className="flex w-max animate-marquee will-change-transform">
         {items.map((label, i) => (
