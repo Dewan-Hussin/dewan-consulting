@@ -21,7 +21,7 @@ export default function HeroSection() {
         }}
         aria-labelledby="hero-title"
       >
-        <div className="absolute inset-0 z-10  bg-main/30 " />
+        <div className="absolute inset-0 z-10  bg-second/50 " />
         <div className={cn("hero-content", "space-y-4", "text-center z-30")}>
           <h1 id="hero-title">
             <span

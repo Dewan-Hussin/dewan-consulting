@@ -56,7 +56,7 @@ export default function Navbar() {
               <div className="shrink-0 flex items-center gap-2">
                 <Link
                   href="/"
-                  className="flex items-center gap-2  hover:opacity-80 transition-opacity"
+                  className="flex items-center gap-2 duration-100 hover:opacity-80 transition-opacity"
                 >
                   <div className=" p-2 rounded-lg">
                     <Image
