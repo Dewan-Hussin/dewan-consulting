@@ -5,7 +5,7 @@ import { SectionEyebrow } from "./SectionEyebrow";
 
 export default function AboutHero() {
   return (
-    <section className="relative min-h-svh w-full overflow-hidden bg-main/20 text-main/50">
+    <section className="relative min-h-svh w-full overflow-hidden bg-second/50 text-main/50">
       {/* background: grid, noise, glow, vignette */}
       <div aria-hidden className="absolute inset-0 bg-grid-slate" />
       <div aria-hidden className="absolute inset-0 bg-noise" />
