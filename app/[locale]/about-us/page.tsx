@@ -12,9 +12,9 @@ export default function CompanyPage() {
     <main>
       <AboutHero />
       <Ticker />
+      <StorySection />
       
       {/* 
-      <StorySection />
       <StatsBand />
       <PrinciplesSection />
       <TimelineSection />
