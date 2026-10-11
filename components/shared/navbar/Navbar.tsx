@@ -1,6 +1,6 @@
 "use client";
 
-import { Link } from "@/i18n/navigation";
+import { Link, usePathname } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
@@ -26,7 +26,16 @@ const navLinks = [
 ];
 
 export default function Navbar() {
+  // ———— 1.Hooks ————————————————————————————————————————————————
   const [isMenu, setIsMenu] = useState(false);
+  const pathname = usePathname();
+
+  // ———— 1.Utilities ————————————————————————————————————————————————
+  // Utility to check if link is active
+  const isActive = (href: string) => {
+    if (href === "/") return pathname === "/";
+    return pathname.startsWith(href);
+  };
 
   return (
     <>
@@ -37,7 +46,7 @@ export default function Navbar() {
             // " bg-navy-900",
             // " bg-linear-to-r from-[#201347] via-[#201347] to-[#E68A50]",
             " bg-main",
-            
+
             // "fixed"
           )}
         >
@@ -73,10 +82,8 @@ export default function Navbar() {
                     key={link.href}
                     href={link.href}
                     className={cn(
-                      "px-3 py-2 rounded-md hover:text-second text-white text-sm font-medium transition-all duration-300",
-                      //   isActive(link.href)
-                      //     ? "bg-slate-100 text-slate-900"
-                      //     : "text-slate-600 hover:bg-slate-50 hover:text-slate-900",
+                      "px-3 py-2 rounded-md hover:text-second  text-sm font-medium transition-all duration-300",
+                      isActive(link.href) ? "active" : "text-white",
                     )}
                   >
                     {link.label}
