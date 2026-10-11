@@ -54,9 +54,11 @@
   --color-brand: #297f8f;
   --color-brand-bright: #275a63;
   --color-navy-950: #000205;
-  --color-navy-900: #04121f;
+  --color-navy-900: #10375b;
   --color-navy-800: #063147;
   --color-paper: #f5f2eb;
+  --color-main: #272522;
+  --color-second: #e6d7b2;
 
   --animate-marquee: marquee 42s linear infinite;
 
@@ -165,5 +167,8 @@
   }
   html {
     @apply font-sans;
+  }
+  .active {
+    @apply text-second;
   }
 }

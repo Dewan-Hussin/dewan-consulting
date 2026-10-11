@@ -17,11 +17,11 @@ export default function HeroSection() {
           // "h-[calc(100svh-64px)]",
         )}
         style={{
-          backgroundImage: `url("/images/hero/hero-bg.webp")`,
+          backgroundImage: `url("/images/hero/herobg.jpg")`,
         }}
         aria-labelledby="hero-title"
       >
-        <div className="absolute inset-0 bg-black/10 z-10 " />
+        <div className="absolute inset-0 z-10  bg-main/30 " />
         <div className={cn("hero-content", "space-y-4", "text-center z-30")}>
           <h1 id="hero-title">
             <span

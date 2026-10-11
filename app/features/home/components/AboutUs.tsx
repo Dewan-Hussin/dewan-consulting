@@ -3,7 +3,6 @@ import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
-import React from "react";
 
 export default function AboutUs() {
   return (
@@ -13,7 +12,7 @@ export default function AboutUs() {
         className={cn(
           "aboutUs-sec",
           "relative w-full overflow-hidden font-sans ",
-          " bg-navy-950 ",
+          " bg-main ",
           // "bg-linear-to-r from-[#000205] via-[#000205]/90 to-[#000205]/80",
           //   "bg-white",
           "py-16",
@@ -35,7 +34,7 @@ export default function AboutUs() {
             <h2 id="hero-title">
               <span
                 className={cn(
-                  `block text-xl md:text-2xl text-slate-100 lg:text-4xl font-bold tracking-tight animate-in slide-in-from-bottom-8 duration-700 fade-in delay-15`,
+                  `block text-xl md:text-2xl text-second lg:text-4xl font-bold tracking-tight animate-in slide-in-from-bottom-8 duration-700 fade-in delay-15`,
                   "text-shadow-background ",
                 )}
               >
@@ -44,14 +43,14 @@ export default function AboutUs() {
             </h2>
             <p>
               <span
-                className={`block text-brand text-sm md:text-md lg:text-lg leading-relaxed max-w-2xl font-medium animate-in slide-in-from-bottom-6 duration-700 fade-in delay-300 `}
+                className={`block text-white/70 text-sm md:text-md lg:text-lg leading-relaxed max-w-2xl font-medium animate-in slide-in-from-bottom-6 duration-700 fade-in delay-300 `}
               >
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo,
                 ad?
               </span>
             </p>
             <p>
-              <span className="text-slate-100 font-semibold text-xs md:text-sm lg:text-md leading-relaxed max-w-2xl">
+              <span className="text-second/90 font-semibold text-xs md:text-sm lg:text-md leading-relaxed max-w-2xl">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab
                 cupiditate consectetur aut accusantium quae accusamus iusto
                 veritatis inventore adipisci corrupti ad officia sequi id error
@@ -66,8 +65,8 @@ export default function AboutUs() {
                 href={"/about-us"}
                 className={cn(
                   buttonVariants({ variant: "link", size: "sm" }),
-                  "hover:no-underline hover:bg-brand/70 group",
-                  "text-white bg-brand text-xs",
+                  "hover:no-underline hover:bg-second group",
+                  "text-main bg-second/80 text-xs font-semibold",
                 )}
               >
                 See more
@@ -80,7 +79,7 @@ export default function AboutUs() {
           </div>
           {/* right */}
           <div className="w-1/2">
-            <div className="relative w-full max-h-80 max-w-125 aspect-square overflow-hidden rounded-md shadow-lg shadow-slate-500">
+            <div className="relative w-full max-h-80 max-w-125 aspect-square overflow-hidden rounded-md shadow-lg shadow-second">
               <Image
                 className="object-cover transition-transform duration-300 hover:scale-125 hover:rotate-6"
                 src="/images/about-us/aboutus.jpg"

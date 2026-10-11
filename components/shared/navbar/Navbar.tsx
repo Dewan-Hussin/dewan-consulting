@@ -34,7 +34,10 @@ export default function Navbar() {
         <nav
           className={cn(
             " backdrop-blur-xs shadow-sm",
-            " bg-navy-900 ",
+            // " bg-navy-900",
+            // " bg-linear-to-r from-[#201347] via-[#201347] to-[#E68A50]",
+            " bg-main",
+            
             // "fixed"
           )}
         >
@@ -70,7 +73,7 @@ export default function Navbar() {
                     key={link.href}
                     href={link.href}
                     className={cn(
-                      "px-3 py-2 rounded-md text-white text-sm font-medium transition-all duration-200",
+                      "px-3 py-2 rounded-md hover:text-second text-white text-sm font-medium transition-all duration-300",
                       //   isActive(link.href)
                       //     ? "bg-slate-100 text-slate-900"
                       //     : "text-slate-600 hover:bg-slate-50 hover:text-slate-900",
