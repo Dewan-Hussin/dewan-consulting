@@ -11,7 +11,7 @@ export default function OurCompany() {
           "relative w-full overflow-hidden font-sans ",
           // " bg-[#000205] ",
           // "bg-linear-to-r from-[#000205] via-[#000205]/90 to-[#000205]/80",
-          "bg-white",
+          "bg-main/10",
           "py-16",
           "",
           // " bg-[#000205] ",
@@ -31,7 +31,7 @@ export default function OurCompany() {
             <h2 id="hero-title">
               <span
                 className={cn(
-                  `block text-xl md:text-2xl text-slate-800 lg:text-4xl font-bold tracking-tight animate-in slide-in-from-bottom-8 duration-700 fade-in delay-15`,
+                  `block text-xl md:text-2xl text-main lg:text-4xl font-bold tracking-tight animate-in slide-in-from-bottom-8 duration-700 fade-in delay-15`,
                   "text-shadow-background ",
                 )}
               >
@@ -40,13 +40,13 @@ export default function OurCompany() {
             </h2>
             <p>
               <span
-                className={`block text-slate-500 text-sm md:text-md lg:text-lg leading-relaxed max-w-2xl font-medium animate-in slide-in-from-bottom-6 duration-700 fade-in delay-300 `}
+                className={`block text-main/70 text-sm md:text-md lg:text-lg leading-relaxed max-w-2xl font-medium animate-in slide-in-from-bottom-6 duration-700 fade-in delay-300 `}
               >
                 Improve Your Business Performance with Dewan Consulting!
               </span>
             </p>
             <p>
-              <span className="text-slate-800 font-semibold text-xs md:text-sm lg:text-md leading-relaxed max-w-2xl">
+              <span className="text-main/90 font-semibold text-xs md:text-sm lg:text-md leading-relaxed max-w-2xl">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab
                 cupiditate consectetur aut accusantium quae accusamus iusto
                 veritatis inventore adipisci corrupti ad officia sequi id error
@@ -58,7 +58,7 @@ export default function OurCompany() {
           </div>
           {/* right */}
           <div className="w-1/2">
-            <div className="relative w-full max-h-80 max-w-125 aspect-square overflow-hidden rounded-md shadow-lg shadow-slate-500">
+            <div className="relative w-full max-h-80 max-w-125 aspect-square overflow-hidden rounded-md shadow-lg shadow-main ">
               <Image
                 className="object-cover transition-transform duration-300 hover:scale-125 hover:-rotate-6"
                 src="/images/about-us/about-us.jpg"
