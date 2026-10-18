@@ -7,10 +7,12 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-sans);
-  --font-cairo: var(--font-cairo);
-  --font-mono: var(--font-geist-mono);
-  --font-heading: var(--font-sans);
+
+  --font-sans: var(--font-geist-local);
+  --font-cairo: var(--font-cairo-local);
+  --font-mono: var(--font-geist-local);
+  --font-heading: var(--font-geist-local);
+
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -19,15 +21,18 @@
   --color-sidebar-primary: var(--sidebar-primary);
   --color-sidebar-foreground: var(--sidebar-foreground);
   --color-sidebar: var(--sidebar);
+
   --color-chart-5: var(--chart-5);
   --color-chart-4: var(--chart-4);
   --color-chart-3: var(--chart-3);
   --color-chart-2: var(--chart-2);
   --color-chart-1: var(--chart-1);
+
   --color-ring: var(--ring);
   --color-input: var(--input);
   --color-border: var(--border);
   --color-destructive: var(--destructive);
+
   --color-accent-foreground: var(--accent-foreground);
   --color-accent: var(--accent);
   --color-muted-foreground: var(--muted-foreground);
@@ -40,6 +45,7 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
+
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);
   --radius-lg: var(--radius);
@@ -60,11 +66,20 @@
 
   --color-main: #272522;
   --color-second: #e6d7b2;
-  /* 
+  /*   
   --color-main: #1b2726;
   --color-second: #b2c5b3;
   */
 
+  /*   
+  --color-main: #6A1823;
+  --color-second: #C3DECE;
+ 
+ */
+  /*   
+  --color-main: #010A13;
+  --color-second: #F5E9D4;
+ */
   --animate-marquee: marquee 42s linear infinite;
 
   @keyframes marquee {
