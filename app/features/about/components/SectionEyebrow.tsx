@@ -19,12 +19,12 @@ export function SectionEyebrow({
         className,
       )}
     >
-      <span className="tabular-nums">{index}</span>
+      <span className="tabular-nums ">{index}</span>
       <span
         aria-hidden
         className={cn(
           "h-px w-8",
-          onDark ? "bg-brand-bright/60" : "bg-slate-900",
+          onDark ? "bg-brand-bright/60" : "bg-second",
         )}
       />
       <span>{label}</span>

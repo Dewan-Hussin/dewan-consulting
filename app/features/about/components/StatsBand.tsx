@@ -5,11 +5,11 @@ import { SectionEyebrow } from "./SectionEyebrow";
 
 const stats = [
   {
-    value: 17,
+    value: 26,
     decimals: 0,
     suffix: "",
     label: "Years shipping software",
-    note: "since 2008",
+    note: "since 2000",
   },
   {
     value: 42,
@@ -82,8 +82,10 @@ export default function StatsBand() {
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) setActive(true);
-        observer.disconnect();
+        if (entry.isIntersecting) {
+          setActive(true);
+          observer.disconnect();
+        }
       },
       { threshold: 0.35 },
     );
@@ -93,20 +95,27 @@ export default function StatsBand() {
   }, []);
 
   return (
-    <section className="relative w-full overflow-hidden bg-navy-950 text-white">
+    <section className="relative w-full overflow-hidden bg-main text-white">
       <div aria-hidden className="absolute inset-0 bg-noise" />
       <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 md:py-24 lg:px-8">
-        <div className="mb-10 flex flex-wrap items-end justify-between gap-6">
-          <SectionEyebrow index="003" label="By the numbers" onDark />
-          <p className="text-sm text-white/50">
+        <div className="mb-10 flex flex-wrap items-end justify-between gap-6 ">
+          <SectionEyebrow
+            index="003"
+            label="By the numbers"
+            className="text-white/80"
+          />
+          <p className="text-sm text-white/80">
             Deliberately boring to operate. Hard to live without.
           </p>
         </div>
 
-        <div ref={ref} className="grid gap-px bg-white/10 sm:grid-cols-2 lg:grid-cols-4">
+        <div
+          ref={ref}
+          className="grid gap-px bg-white/10 sm:grid-cols-2 lg:grid-cols-4"
+        >
           {stats.map((stat) => (
-            <div key={stat.label} className="bg-navy-950 p-8 sm:p-10">
-              <p className="text-4xl font-bold tabular-nums tracking-tight text-brand-bright lg:text-5xl">
+            <div key={stat.label} className="bg-main/50 p-8 sm:p-10">
+              <p className="text-4xl font-bold tabular-nums tracking-tight text-second lg:text-5xl">
                 <CountUp
                   value={stat.value}
                   decimals={stat.decimals}
@@ -114,7 +123,9 @@ export default function StatsBand() {
                 />
                 {stat.suffix}
               </p>
-              <p className="mt-3 text-sm font-semibold text-white">{stat.label}</p>
+              <p className="mt-3 text-sm font-semibold text-white">
+                {stat.label}
+              </p>
               <p className="mt-1 text-xs text-white/50">{stat.note}</p>
             </div>
           ))}

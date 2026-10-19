@@ -14,8 +14,8 @@ export default function CompanyPage() {
       <Ticker />
       <StorySection />
       
-      {/* 
       <StatsBand />
+      {/* 
       <PrinciplesSection />
       <TimelineSection />
       <TeamSection />
