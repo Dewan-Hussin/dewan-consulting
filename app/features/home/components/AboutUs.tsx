@@ -30,8 +30,8 @@ export default function AboutUs() {
           )}
         >
           {/* left */}
-          <div className={cn("hero-content  ", "space-y-4", "w-1/2 py-5")}>
-            <h2 id="hero-title">
+          <div className={cn("about-content  ", "space-y-4", "w-1/2 py-5")}>
+            <h2 id="about-title">
               <span
                 className={cn(
                   `block text-xl md:text-2xl text-second lg:text-4xl font-bold tracking-tight animate-in slide-in-from-bottom-8 duration-700 fade-in delay-15`,

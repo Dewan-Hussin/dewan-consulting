@@ -7,7 +7,7 @@ import { useCallback, useState } from "react";
 export default function PalettePanel() {
   // ——— 1.Hooks —————————————————————————————————
   // useState
-  const [triggerPalette, setTriggerPalette] = useState(true);
+  const [triggerPalette, setTriggerPalette] = useState(false);
 
   // useCallback
   const handleTriggerPalette = useCallback(() => {
