@@ -42,7 +42,8 @@ export default function OurCompany() {
               <span
                 className={`block text-main/70 text-sm md:text-md lg:text-lg leading-relaxed max-w-2xl font-medium animate-in slide-in-from-bottom-6 duration-700 fade-in delay-300 `}
               >
-                Improve Your Business Performance with Dewan Consulting!
+                Dewan consulting was founded in 1987 by Engineer Hany El
+                Tarhony.
               </span>
             </p>
             <p>
