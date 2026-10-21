@@ -48,7 +48,7 @@ const SectionCard = ({ cardData }: Props) => {
             </CardTitle>
           </CardHeader>
 
-          <CardContent className="min-h-0 flex-1 overflow-y-auto px-5 pb-4 text-main/70 group-hover:text-white duration-300 transition-all text-center">
+          <CardContent className="min-h-0 flex-1 overflow-y-auto px-5 pb-4 text-main/70 group-hover:text-white/70 duration-300 transition-all text-center">
             <p className="whitespace-pre-line wrap-break-word text-sm leading-7 ">
               {cardData.description}
             </p>
