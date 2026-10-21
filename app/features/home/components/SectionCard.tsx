@@ -1,7 +1,6 @@
 "use client";
 
-import { memo, useEffect } from "react";
-
+import { memo } from "react";
 import {
   Card,
   CardContent,
@@ -11,82 +10,56 @@ import {
 } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import { ServicesCard } from "../types/servicesSec.types";
 
-const SectionCard = () => {
-  //   useEffect(() => {
-  //     const all = document.querySelectorAll(".spotlight-card");
+type Props = {
+  cardData: ServicesCard;
+};
 
-  //     const handleMouseMove = (ev: MouseEvent) => {
-  //       all.forEach((e) => {
-  //         const blob = e.querySelector(".blob") as HTMLElement;
-  //         const fblob = e.querySelector(".fake-blob") as HTMLElement;
-
-  //         if (!blob || !fblob) return;
-
-  //         const rec = fblob.getBoundingClientRect();
-
-  //         blob.style.opacity = "1";
-
-  //         blob.animate(
-  //           [
-  //             {
-  //               transform: `translate(${
-  //                 ev.clientX - rec.left - rec.width / 2
-  //               }px, ${ev.clientY - rec.top - rec.height / 2}px)`,
-  //             },
-  //           ],
-  //           {
-  //             duration: 300,
-  //             fill: "forwards",
-  //           },
-  //         );
-  //       });
-  //     };
-
-  //     window.addEventListener("mousemove", handleMouseMove);
-
-  //     return () => {
-  //       window.removeEventListener("mousemove", handleMouseMove);
-  //     };
-  //   }, []);
-
+const SectionCard = ({ cardData }: Props) => {
   return (
-    <div className="h-max w-max mx-auto">
-      <div className="spotlight-card group bg-border relative overflow-hidden rounded-xl p-px transition-all duration-300 ease-in-out">
+    <div className="group h-85 w-full min-w-0">
+      <div
+        className={cn(
+          "spotlight-card relative h-full overflow-hidden rounded-xl",
+          " p-px",
+          "transition-all duration-300 ease-in-out",
+        )}
+      >
+        {/* Hover background */}
+        <div className="absolute inset-y-0 left-0 w-1/2 -translate-x-full bg-main transition-transform duration-300 group-hover:translate-x-0" />
+
+        <div className="absolute inset-y-0 right-0 w-1/2 translate-x-full bg-main transition-transform duration-300 group-hover:translate-x-0" />
+
         <Card
           className={cn(
-            "text-center text-main bg-second/10 max-w-80 ring-0 transition-all duration-300 ease-in-out group-hover:backdrop-blur-[20px]",
-            "group-hover:scale-[105%]",
+            "relative z-10 flex h-full flex-col overflow-hidden",
+            "border-0 bg-second/10 text-main shadow-none",
+            "transition-all duration-300 ease-in-out",
+            "group-hover:scale-[1.01]",
+            "group-hover:backdrop-blur-[20px]",
+            "",
+
           )}
         >
-          <div
-            className={cn(
-              "absolute left-0 top-0 bg-second h-full duration-300",
-              "w-1/2 transform -translate-x-100",
-              "group-hover:translate-x-0",
-            )}
-          ></div>
-          <div
-            className={cn(
-              "absolute right-0 top-0 bg-second h-full duration-300",
-              "w-1/2 transform translate-x-100",
-              "group-hover:translate-x-0",
-            )}
-          ></div>
-          <CardHeader className="z-10">
-            <CardTitle className="">Payroll Outsourcing</CardTitle>
+          <CardHeader className="shrink-0 px-5 pb-3 pt-6">
+            <CardTitle className="text-lg font-bold leading-snug group-hover:text-white duration-300 transition-all">
+              {cardData.title}
+            </CardTitle>
           </CardHeader>
-          <CardContent className="z-10">
-            Tired of doing all the tiring, time consuming salary calculations
-            every month! Through our Outsourcing service we will remove this
-            burden off your shoulders.
+
+          <CardContent className="min-h-0 flex-1 overflow-y-auto px-5 pb-4 text-main/70 group-hover:text-white duration-300 transition-all">
+            <p className="whitespace-pre-line wrap-break-word text-sm leading-7 ">
+              {cardData.description}
+            </p>
           </CardContent>
-          <CardFooter className="gap-3 max-sm:flex-col max-sm:items-stretch z-10 bg-second/10 border-none">
-            <Button className="cursor-pointer bg-main text-xs hover:bg-main/90 ">Explore More</Button>
+
+          <CardFooter className="mt-auto shrink-0 border-t border-main/10 bg-second/10 p-4">
+            <Button className="w-full cursor-pointer bg-main text-xs text-white hover:bg-main/90">
+              Explore More
+            </Button>
           </CardFooter>
         </Card>
-        {/* <div className="blob absolute top-0 left-0 size-20 rounded-full  bg-green-600/60 opacity-0 blur-2xl transition-all duration-300 ease-in-out " /> */}
-        {/* <div className="fake-blob absolute top-0 left-0 size-20 rounded-full" /> */}
       </div>
     </div>
   );

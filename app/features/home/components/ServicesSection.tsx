@@ -1,8 +1,29 @@
+"use client";
 import { cn } from "@/lib/utils";
-import React from "react";
 import SectionCard from "./SectionCard";
+import { fetchServicesCard } from "../api/fetchServicesCard";
+import { Button } from "@/components/ui/button";
+import { useEffect, useState } from "react";
+import { ServicesCardS } from "../types/servicesSec.types";
 
 export default function ServicesSection() {
+  const [servicesCards, setServicesCards] = useState<ServicesCardS>([]);
+useEffect(() => {
+  const fetchData = async () => {
+    try {
+      const data = await fetchServicesCard();
+
+      console.log("Fetched services:", data);
+
+      setServicesCards(data.servicesCards);
+    } catch (error) {
+      console.error("Failed to fetch services:", error);
+    }
+  };
+
+  fetchData();
+}, []);
+
   return (
     <>
       <section
@@ -18,7 +39,7 @@ export default function ServicesSection() {
         <div
           className={cn(
             "space-y-10 ",
-            "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+            "max-w-6xl mx-auto px-4 sm:px-6 lg:px-8",
           )}
         >
           <div
@@ -46,32 +67,14 @@ export default function ServicesSection() {
                 Tailored Project Implementation.
               </span>
             </p>
-
-            <div>
-              {/* <Link
-                href={"/about-us"}
-                className={cn(
-                  buttonVariants({ variant: "link", size: "sm" }),
-                  "hover:no-underline hover:bg-main group",
-                  "text-main bg-main/80 text-xs font-semibold",
-                )}
-              >
-                See more
-                <span className="group-hover:translate-x-1 transition-transform duration-300 ">
-                  {" "}
-                  <ArrowRight />{" "}
-                </span>
-              </Link> */}
-            </div>
           </div>
 
-          <div className="bg-main px-3 py-5 space-y-3 flex flex-wrap gap-3 rounded-md">
-            <SectionCard />
-            <SectionCard />
-            <SectionCard />
-            <SectionCard />
-            <SectionCard />
-            <SectionCard />
+          <div className="grid grid-cols-1 gap-5 rounded-md  px-4 py-6 sm:grid-cols-2 lg:grid-cols-2">
+            {(
+              servicesCards.map((servicesCard) => (
+                <SectionCard cardData={servicesCard} key={servicesCard.id} />
+              ))
+            )}
           </div>
         </div>
       </section>
