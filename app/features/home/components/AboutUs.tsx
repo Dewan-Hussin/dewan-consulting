@@ -45,18 +45,16 @@ export default function AboutUs() {
               <span
                 className={`block text-white/70 text-sm md:text-md lg:text-lg leading-relaxed max-w-2xl font-medium animate-in slide-in-from-bottom-6 duration-700 fade-in delay-300 `}
               >
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo,
-                ad?
+                Improve Your Business Performance with Dewan Consulting!
               </span>
             </p>
             <p>
-              <span className="text-second/90 font-semibold text-xs md:text-sm lg:text-md leading-relaxed max-w-2xl">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab
-                cupiditate consectetur aut accusantium quae accusamus iusto
-                veritatis inventore adipisci corrupti ad officia sequi id error
-                ex, dolorum eius consequuntur? Iste quis doloremque aut
-                repellendus placeat voluptatem hic odio eveniet. Neque doloribus
-                quisquam quidem eligendi iure et quam minima voluptates sunt?
+              <span className="text-white/80 font-semibold text-xs md:text-sm lg:text-md leading-relaxed max-w-2xl">
+                Our company is formed of a group of talented software engineers,
+                programmers, and business consultants who are fully capable of
+                translating business needs into actual solutions and make our
+                client’s life easier. We do this effectively and efficiently in
+                order to suit our client’s business environment.
               </span>
             </p>
 
@@ -66,7 +64,7 @@ export default function AboutUs() {
                 className={cn(
                   buttonVariants({ variant: "link", size: "sm" }),
                   "hover:no-underline hover:bg-second group",
-                  "text-main bg-second/80 text-xs font-semibold",
+                  "text-main bg-white text-xs font-semibold px-5 py-4",
                 )}
               >
                 See more
