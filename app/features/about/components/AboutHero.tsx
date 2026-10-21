@@ -5,21 +5,9 @@ import { SectionEyebrow } from "./SectionEyebrow";
 
 export default function AboutHero() {
   return (
-    <section className="relative min-h-svh w-full overflow-hidden bg-second/50 text-main/50">
-      {/* background: grid, noise, glow, vignette */}
-      <div aria-hidden className="absolute inset-0 bg-grid-slate" />
-      <div aria-hidden className="absolute inset-0 bg-noise" />
-      <div
-        aria-hidden
-        className="absolute -top-44 inset-e-[-12%] h-144 w-xl rounded-full"
-      />
-      <div
-        aria-hidden
-        className="absolute inset-x-0 bottom-0 h-44 bg-linear-to-t from-main/20 to-transparent"
-      />
-
-      <div className="relative mx-auto flex min-h-svh max-w-7xl flex-col px-4 pb-10 pt-24 sm:px-6 lg:px-8">
-        <div className="flex flex-1 flex-col justify-center gap-7 py-16">
+    <section className="relative min-h-svh w-full overflow-hidden bg-second/50 text-main/50 py-20">
+      <div className="relative mx-auto flex min-h-svh max-w-7xl flex-col px-4 pb-10 sm:px-6 lg:px-8">
+        <div className="flex flex-1 flex-col justify-center gap-7 ">
           <Reveal>
             <SectionEyebrow index="001" label="Who we are" />
           </Reveal>
