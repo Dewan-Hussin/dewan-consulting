@@ -47,12 +47,11 @@ export default function OurCompany() {
             </p>
             <p>
               <span className="text-main/90 font-semibold text-xs md:text-sm lg:text-md leading-relaxed max-w-2xl">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab
-                cupiditate consectetur aut accusantium quae accusamus iusto
-                veritatis inventore adipisci corrupti ad officia sequi id error
-                ex, dolorum eius consequuntur? Iste quis doloremque aut
-                repellendus placeat voluptatem hic odio eveniet. Neque doloribus
-                quisquam quidem eligendi iure et quam minima voluptates sunt?
+                Dewan consulting is a leading software company that is
+                specialized in tailored software systems and outsourcing
+                services for basic business functions such as payroll
+                outsourcing services, project management services &
+                implementation project audit, etc…
               </span>
             </p>
           </div>
