@@ -18,7 +18,7 @@ type Props = {
 
 const SectionCard = ({ cardData }: Props) => {
   return (
-    <div className="group h-85 w-full min-w-0">
+    <div className="group w-full min-w-0 cursor-pointer">
       <div
         className={cn(
           "spotlight-card relative h-full overflow-hidden rounded-xl",
@@ -43,22 +43,22 @@ const SectionCard = ({ cardData }: Props) => {
           )}
         >
           <CardHeader className="shrink-0 px-5 pb-3 pt-6">
-            <CardTitle className="text-lg font-bold leading-snug group-hover:text-white duration-300 transition-all">
+            <CardTitle className="text-lg font-bold leading-snug group-hover:text-white duration-300 transition-all text-center">
               {cardData.title}
             </CardTitle>
           </CardHeader>
 
-          <CardContent className="min-h-0 flex-1 overflow-y-auto px-5 pb-4 text-main/70 group-hover:text-white duration-300 transition-all">
+          <CardContent className="min-h-0 flex-1 overflow-y-auto px-5 pb-4 text-main/70 group-hover:text-white duration-300 transition-all text-center">
             <p className="whitespace-pre-line wrap-break-word text-sm leading-7 ">
               {cardData.description}
             </p>
           </CardContent>
-
+{/* 
           <CardFooter className="mt-auto shrink-0 border-t border-main/10 bg-second/10 p-4">
             <Button className="w-full cursor-pointer bg-main text-xs text-white hover:bg-main/90">
               Explore More
             </Button>
-          </CardFooter>
+          </CardFooter> */}
         </Card>
       </div>
     </div>
