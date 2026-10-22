@@ -39,10 +39,10 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="fixed top-0 w-full z-50">
+      <header className="fixed top-0 w-full z-50 ">
         <nav
           className={cn(
-            " backdrop-blur-xs shadow-sm",
+            " backdrop-blur-xs shadow-sm ",
             // " bg-navy-900",
             // " bg-linear-to-r from-[#201347] via-[#201347] to-[#E68A50]",
             " bg-main",
@@ -50,7 +50,7 @@ export default function Navbar() {
             // "fixed"
           )}
         >
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className=" mx-auto px-4 sm:px-6 lg:px-8 container ">
             <div className="flex justify-between items-center h-16">
               {/* Logo / Brand */}
               <div className="shrink-0 flex items-center gap-2">
