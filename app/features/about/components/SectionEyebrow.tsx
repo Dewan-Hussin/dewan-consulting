@@ -15,18 +15,12 @@ export function SectionEyebrow({
     <p
       className={cn(
         "flex items-center gap-3 text-[0.7rem] font-semibold uppercase tracking-[0.22em]",
-        onDark ? "text-brand-bright" : "text-slate-600",
+        "text-slate-600",
         className,
       )}
     >
       <span className="tabular-nums ">{index}</span>
-      <span
-        aria-hidden
-        className={cn(
-          "h-px w-8",
-          onDark ? "bg-brand-bright/60" : "bg-second",
-        )}
-      />
+      <span aria-hidden className={cn("h-px w-8", "bg-second")} />
       <span>{label}</span>
     </p>
   );
