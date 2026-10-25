@@ -102,6 +102,25 @@ const benefits = [
   "Accurate and efficient salary calculations",
   "Reports tailored to your requirements",
 ];
+
+const payrollSteps = [
+  {
+    number: "01",
+    title: "Submit your data",
+    description: "Provide the required employee and transaction data.",
+  },
+  {
+    number: "02",
+    title: "We process payroll",
+    description: "Our team calculates salaries and prepares the reports.",
+  },
+  {
+    number: "03",
+    title: "Receive your reports",
+    description: "Get organized payroll outputs tailored to your needs.",
+  },
+];
+
 function PayrollOutsourcing() {
   console.log(payrollReports, benefits);
 
@@ -110,43 +129,41 @@ function PayrollOutsourcing() {
       {/* Services Overview */}
       <section className="container mx-auto mt-16 px-4 sm:mt-20 sm:px-6 lg:px-8">
         <Reveal>
-          <div className="relative overflow-hidden rounded-2xl border border-main/10 bg-white p-6 shadow-sm sm:p-10 lg:p-14">
-            <div className="pointer-events-none absolute -right-20 -top-24 h-64 w-64 rounded-full bg-second/70 blur-3xl" />
+          <div className="relative overflow-hidden rounded-2xl border border-main/30 bg-white shadow-xs">
+            {/* <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-second/70 blur-3xl" /> */}
 
-            <div className="relative grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
-              {/* Service Introduction */}
-              <div className="flex flex-col justify-between gap-10">
-                <div>
-                  <div className="flex items-center gap-3">
-                    <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-main text-white">
-                      <Banknote size={23} strokeWidth={1.7} />
-                    </span>
+            <div className="relative grid lg:grid-cols-[1.05fr_0.95fr]">
+              {/* LEFT — Service Introduction */}
+              <div className="p-6 sm:p-10 lg:p-14">
+                <div className="flex items-center gap-3">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-main text-white">
+                    <Banknote size={23} strokeWidth={1.7} />
+                  </span>
 
-                    {/* id */}
-                    <span className="text-xs font-semibold uppercase tracking-[0.2em] text-main/50">
-                      Service 001
-                    </span>
-                  </div>
-                  {/* title */}
-                  <h2 className="mt-7 text-3xl font-semibold tracking-tight text-main sm:text-4xl">
-                    Payroll
-                    <span className="block">Outsourcing</span>
-                  </h2>
-                  {/* desc1 */}
-                  <p className="mt-5 text-base leading-8 text-main/65">
-                    Simplify your monthly payroll operations with a reliable,
-                    confidential, and efficient outsourcing service that takes
-                    the complexity out of salary processing.
-                  </p>
-
-                  {/* desc2 */}
-                  <p className="mt-4 text-sm leading-7 text-main/60">
-                    Our experienced team processes employee transactions,
-                    performs salary calculations, and prepares the reports your
-                    organization needs, with the flexibility to adapt reporting
-                    formats to your requirements.
-                  </p>
+                  {/* id */}
+                  <span className="text-xs font-semibold uppercase tracking-[0.2em] text-main/50">
+                    Service 001
+                  </span>
                 </div>
+                {/* title */}
+                <h2 className="mt-7 text-3xl font-semibold tracking-tight text-main sm:text-4xl">
+                  Payroll
+                  <span className="block">Outsourcing</span>
+                </h2>
+                {/* desc1 */}
+                <p className="mt-5 text-base leading-8 text-main/65">
+                  Simplify your monthly payroll operations with a reliable,
+                  confidential, and efficient outsourcing service that takes the
+                  complexity out of salary processing.
+                </p>
+
+                {/* desc2 */}
+                <p className="my-4 text-sm leading-7 text-main/60">
+                  Our experienced team processes employee transactions, performs
+                  salary calculations, and prepares the reports your
+                  organization needs, with the flexibility to adapt reporting
+                  formats to your requirements.
+                </p>
 
                 {/* benefits */}
                 <div className="space-y-4 border-t border-main/10 pt-6">
@@ -168,61 +185,42 @@ function PayrollOutsourcing() {
                 </div>
               </div>
 
-              {/* Workflow Panel */}
-              <div className="flex flex-col justify-between rounded-xl bg-second/60 p-6 sm:p-8 lg:p-9">
+              {/* RIGHT — Workflow Panel */}
+              <div className="relative flex flex-col bg-main/95 p-6 sm:p-10 lg:p-14">
                 <div>
-                  <span className="text-xs font-semibold uppercase tracking-[0.18em] text-main/50">
+                  <span className="text-xs font-semibold uppercase tracking-[0.18em] text-white/50">
                     How it works
                   </span>
 
-                  <h3 className="mt-3 text-2xl font-semibold tracking-tight text-main">
+                  <h3 className="mt-3 text-2xl font-semibold tracking-tight text-white">
                     Payroll, made simpler.
                   </h3>
 
-                  <p className="mt-3 text-sm leading-7 text-main/60">
+                  <p className="mt-3 text-sm leading-7 text-white/60">
                     A straightforward process designed to reduce your
                     administrative workload.
                   </p>
                 </div>
 
                 <div className="mt-8 space-y-0">
-                  {[
-                    {
-                      number: "01",
-                      title: "Submit your data",
-                      description:
-                        "Provide the required employee and transaction data.",
-                    },
-                    {
-                      number: "02",
-                      title: "We process payroll",
-                      description:
-                        "Our team calculates salaries and prepares the reports.",
-                    },
-                    {
-                      number: "03",
-                      title: "Receive your reports",
-                      description:
-                        "Get organized payroll outputs tailored to your needs.",
-                    },
-                  ].map((step, index) => (
+                  {payrollSteps.map((step, index) => (
                     <div
                       key={step.number}
                       className="relative flex gap-4 pb-7 last:pb-0"
                     >
                       {index !== 2 && (
-                        <span className="absolute left-4.25 top-10 h-[calc(100%-30px)] w-px bg-main/15" />
+                        <span className="absolute left-4.25 top-10 h-[calc(100%-30px)] w-px bg-second/15" />
                       )}
 
-                      <span className="relative z-10 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-main/15 bg-white text-xs font-semibold text-main">
+                      <span className="relative z-10 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-second/15 bg-white text-xs font-semibold text-main">
                         {step.number}
                       </span>
 
                       <div className="pt-1">
-                        <h4 className="text-sm font-semibold text-main">
+                        <h4 className="text-sm font-semibold text-white">
                           {step.title}
                         </h4>
-                        <p className="mt-1 text-sm leading-6 text-main/60">
+                        <p className="mt-1 text-sm leading-6 text-white/60">
                           {step.description}
                         </p>
                       </div>
