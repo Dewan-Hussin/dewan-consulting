@@ -1,6 +1,6 @@
 "use client";
 import { cn } from "@/lib/utils";
-import SectionCard from "./SectionCard";
+import ServicesSectionCard from "./ServicesSectionCard";
 import { fetchServicesCard } from "../api/fetchServicesCard";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
@@ -72,7 +72,7 @@ useEffect(() => {
           <div className="grid grid-cols-1 gap-5 rounded-md  px-4 py-6 sm:grid-cols-2 lg:grid-cols-2">
             {(
               servicesCards.map((servicesCard) => (
-                <SectionCard cardData={servicesCard} key={servicesCard.id} />
+                <ServicesSectionCard cardData={servicesCard} key={servicesCard.id} />
               ))
             )}
           </div>
