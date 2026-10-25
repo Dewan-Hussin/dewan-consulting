@@ -252,13 +252,13 @@ function PayrollOutsourcing() {
       <section className="container mx-auto mt-20 px-4 sm:mt-24 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-5 border-b border-main/10 pb-8 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <Reveal>
+            {/* <Reveal>
               <SectionEyebrow
                 index="01"
                 label="Deliverables"
                 className="text-xs tracking-[0.18em]"
               />
-            </Reveal>
+            </Reveal> */}
 
             <Reveal delay={80} className="mt-4">
               <h2 className="text-3xl font-semibold tracking-tight text-main sm:text-4xl">
@@ -267,12 +267,12 @@ function PayrollOutsourcing() {
             </Reveal>
           </div>
 
-          <Reveal delay={120}>
+          {/* <Reveal delay={120}>
             <p className="max-w-md text-sm leading-7 text-main/60 sm:text-right">
               Detailed insights and structured reporting to support your
               payroll, financial, and administrative operations.
             </p>
-          </Reveal>
+          </Reveal> */}
         </div>
 
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
