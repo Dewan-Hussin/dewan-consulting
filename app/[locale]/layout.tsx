@@ -79,7 +79,8 @@ export default async function RootLayout({
     <html
       lang={locale}
       dir={dir}
-      className={`${geist.variable} ${cairo.variable}`}
+      className={`${geist.variable} ${cairo.variable} scroll-smooth`}
+      data-scroll-behavior="smooth"
     >
       <body
         className={cn(
