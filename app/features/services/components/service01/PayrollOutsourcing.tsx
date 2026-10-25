@@ -10,14 +10,12 @@ import {
   FileSpreadsheet,
   Landmark,
   LockKeyhole,
-  LucideIcon,
   ReceiptText,
   ShieldCheck,
   Users,
 } from "lucide-react";
-import React, { memo } from "react";
-import Reveal from "../../about/components/Reveal";
-import { SectionEyebrow } from "../../about/components/SectionEyebrow";
+import { memo } from "react";
+import Reveal from "@/components/shared/Reveal";
 
 // Payroll Outsourcing
 const payrollReports = [

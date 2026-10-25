@@ -1,5 +1,5 @@
-import Reveal from "./Reveal";
-import { SectionEyebrow } from "./SectionEyebrow";
+import Reveal from "../../../../components/shared/Reveal";
+import { SectionEyebrow } from "../../../../components/shared/SectionEyebrow";
 
 const team = [
   { initials: "AH", name: "Ahmed Hassan", role: "Founder & Managing Director" },

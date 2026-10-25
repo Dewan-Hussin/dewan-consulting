@@ -1,4 +1,4 @@
-import Reveal from "@/app/features/about/components/Reveal";
+import Reveal from "@/components/shared/Reveal";
 import PayrollOutsourcing from "@/app/features/services/components/service01/PayrollOutsourcing";
 
 export default function PayrollOutsourcingPage() {

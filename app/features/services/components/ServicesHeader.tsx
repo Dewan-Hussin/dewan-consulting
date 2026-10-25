@@ -1,6 +1,6 @@
 import React from "react";
-import Reveal from "../../about/components/Reveal";
-import { SectionEyebrow } from "../../about/components/SectionEyebrow";
+import Reveal from "../../../../components/shared/Reveal";
+import { SectionEyebrow } from "../../../../components/shared/SectionEyebrow";
 
 export default function ServicesHeader() {
   return (
