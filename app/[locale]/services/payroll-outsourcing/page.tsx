@@ -1,25 +1,14 @@
-// "use client"
-
 import Reveal from "@/app/features/about/components/Reveal";
-import { SectionEyebrow } from "@/app/features/about/components/SectionEyebrow";
-import PayrollOutsourcing from "@/app/features/services/components/PayrollOutsourcing";
-import ServicesHeader from "@/app/features/services/components/ServicesHeader";
-import ServicesPagination from "@/app/features/services/components/ServicesPagination";
+import PayrollOutsourcing from "@/app/features/services/components/service01/PayrollOutsourcing";
 
 export default function PayrollOutsourcingPage() {
   return (
     <>
-      
+      {/* Service #01 */}
+      <PayrollOutsourcing />
 
-        {/* Paginations */}
-        {/* <ServicesPagination /> */}
-
-        {/* Services */}
-        {/* Service #01 */}
-        <PayrollOutsourcing />
-
-        {/* Closing Statement */}
-        {/* <section className="container mx-auto mt-20 px-4 sm:mt-24 sm:px-6 lg:px-8">
+      {/* Closing Statement */}
+      <section className="container mx-auto mt-20 px-4 sm:mt-24 sm:px-6 lg:px-8">
         <Reveal>
           <div className="flex flex-col gap-4 border-t border-main/10 pt-8 sm:flex-row sm:items-center sm:justify-between">
             <div>
@@ -37,8 +26,7 @@ export default function PayrollOutsourcingPage() {
             </span>
           </div>
         </Reveal>
-      </section> */}
-      
+      </section>
     </>
   );
 }
