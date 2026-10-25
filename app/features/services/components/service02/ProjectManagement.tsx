@@ -107,20 +107,20 @@ function ProjectManagement() {
             </div>
 
             {/* RIGHT — Workflow */}
-            <div className="relative flex flex-col justify-between bg-second/60 p-6 sm:p-10 lg:p-14">
+            <div className="relative flex flex-col justify-between bg-main/95 p-6 sm:p-10 lg:p-14">
               <div>
-                <span className="text-xs font-semibold uppercase tracking-[0.18em] text-main/45">
+                <span className="text-xs font-semibold uppercase tracking-[0.18em] text-white/45">
                   Our Approach
                 </span>
 
-                <h3 className="mt-3 max-w-md text-2xl font-semibold tracking-tight text-main sm:text-3xl">
+                <h3 className="mt-3 max-w-md text-2xl font-semibold tracking-tight text-white sm:text-3xl">
                   Your project.
-                  <span className="block text-main/55">
+                  <span className="block text-white/55">
                     Professionally managed.
                   </span>
                 </h3>
 
-                <p className="mt-4 max-w-md text-sm leading-7 text-main/60">
+                <p className="mt-4 max-w-md text-sm leading-7 text-white/60">
                   From selecting the right solution to completing implementation
                   and training, we stay involved at every critical stage.
                 </p>
@@ -145,11 +145,11 @@ function ProjectManagement() {
 
                     {/* Content */}
                     <div className="pt-0.5">
-                      <h4 className="text-sm font-semibold text-main">
+                      <h4 className="text-sm font-semibold text-white">
                         {step.title}
                       </h4>
 
-                      <p className="mt-1 max-w-sm text-sm leading-6 text-main/60">
+                      <p className="mt-1 max-w-sm text-sm leading-6 text-white/60">
                         {step.description}
                       </p>
                     </div>
