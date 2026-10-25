@@ -1,15 +1,10 @@
 "use client";
 
 import { memo } from "react";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
-import { ServicesCard } from "../types/servicesSec.types";
 import { Link } from "@/i18n/navigation";
+import { ServicesCard } from "../data/servicesSec";
 
 type Props = {
   cardData: ServicesCard;

@@ -1,29 +1,9 @@
 "use client";
 import { cn } from "@/lib/utils";
 import ServicesSectionCard from "./ServicesSectionCard";
-import { fetchServicesCard } from "../api/fetchServicesCard";
-import { Button } from "@/components/ui/button";
-import { useEffect, useState } from "react";
-import { ServicesCardS } from "../types/servicesSec.types";
+import { servicesCard } from "../data/servicesSec";
 
 export default function ServicesSection() {
-  const [servicesCards, setServicesCards] = useState<ServicesCardS>([]);
-useEffect(() => {
-  const fetchData = async () => {
-    try {
-      const data = await fetchServicesCard();
-
-      console.log("Fetched services:", data);
-
-      setServicesCards(data.servicesCards);
-    } catch (error) {
-      console.error("Failed to fetch services:", error);
-    }
-  };
-
-  fetchData();
-}, []);
-
   return (
     <>
       <section
@@ -70,11 +50,12 @@ useEffect(() => {
           </div>
 
           <div className="grid grid-cols-1 gap-5 rounded-md  px-4 py-6 sm:grid-cols-2 lg:grid-cols-2">
-            {(
-              servicesCards.map((servicesCard) => (
-                <ServicesSectionCard cardData={servicesCard} key={servicesCard.id} />
-              ))
-            )}
+            {servicesCard.map((servicesCard) => (
+              <ServicesSectionCard
+                cardData={servicesCard}
+                key={servicesCard.id}
+              />
+            ))}
           </div>
         </div>
       </section>
