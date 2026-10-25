@@ -16,7 +16,7 @@ export default function ServicesHeader() {
             />
           </Reveal>
 
-          <Reveal delay={80} className="mt-6">
+          {/* <Reveal delay={80} className="mt-6">
             <h1 className="text-4xl font-semibold leading-tight tracking-tight text-main sm:text-5xl lg:text-6xl">
               Solutions designed
               <span className="block text-main/55">around your business.</span>
@@ -29,7 +29,7 @@ export default function ServicesHeader() {
               streamline operations, support digital transformation, and help
               organizations achieve sustainable growth.
             </p>
-          </Reveal>
+          </Reveal> */}
         </div>
       </header>
     </>
