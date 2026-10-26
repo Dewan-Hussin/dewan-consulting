@@ -5,19 +5,20 @@ import { projectManagementService } from "../../data/service02";
 
 function ProjectManagement() {
   const { projectSteps, managedAreas } = projectManagementService;
+
   return (
-    <section className="container mx-auto mt-16 px-4 sm:mt-20 sm:px-6 lg:px-8">
+    <section className="container mx-auto mt-10 px-4 sm:mt-12 sm:px-6 lg:px-8">
       <Reveal>
-        <div className="relative overflow-hidden rounded-2xl border border-main/10 bg-white shadow-sm transform scale-95">
+        <div className="relative overflow-hidden rounded-2xl border border-main/10 bg-white shadow-sm">
           {/* Decorative element */}
           <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-second/70 blur-3xl" />
 
-          <div className="relative grid lg:grid-cols-1">
+          <div className="relative grid lg:grid-cols-[0.9fr_1.1fr]">
             {/* LEFT — Introduction */}
-            <div className="p-6 sm:p-10 lg:p-14">
+            <div className="p-5 sm:p-8 lg:p-10">
               <div className="flex items-center gap-3">
-                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-main text-white">
-                  <NotebookPen size={23} strokeWidth={1.7} />
+                <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-main text-white">
+                  <NotebookPen size={21} strokeWidth={1.7} />
                 </span>
 
                 <span className="text-xs font-semibold uppercase tracking-[0.2em] text-main/50">
@@ -25,19 +26,19 @@ function ProjectManagement() {
                 </span>
               </div>
 
-              <h2 className="mt-7 text-3xl font-semibold leading-tight tracking-tight text-main sm:text-4xl">
+              <h2 className="mt-5 text-3xl font-semibold leading-tight tracking-tight text-main sm:text-4xl">
                 Project
                 <span className="block text-main/55">Management</span>
               </h2>
 
-              <p className="mt-6 text-base leading-8 text-main/70">
+              <p className="mt-5 text-base leading-7 text-main/70">
                 Implementing a project or acquiring a new system can be
                 challenging when it falls outside your area of expertise. Our
                 project management service gives you the support and control you
                 need throughout the entire process.
               </p>
 
-              <p className="mt-4 text-sm leading-7 text-main/60">
+              <p className="mt-3 text-sm leading-6 text-main/60">
                 We manage the project from finding the right offer through
                 implementation planning, deadline monitoring, and required
                 training sessions. This allows you to focus on your core
@@ -45,7 +46,7 @@ function ProjectManagement() {
               </p>
 
               {/* Managed Areas */}
-              <div className="mt-10 border-t border-main/10 pt-8">
+              <div className="mt-7 border-t border-main/10 pt-6">
                 <div className="flex items-center justify-between">
                   <h3 className="text-sm font-semibold text-main">
                     What we manage
@@ -56,7 +57,7 @@ function ProjectManagement() {
                   </span>
                 </div>
 
-                <div className="mt-5 grid gap-3 sm:grid-cols-2">
+                <div className="mt-4 grid gap-2.5 sm:grid-cols-2">
                   {managedAreas.map((area) => (
                     <div
                       key={area}
@@ -76,7 +77,7 @@ function ProjectManagement() {
             </div>
 
             {/* RIGHT — Workflow */}
-            <div className="relative flex flex-col justify-between bg-main/95 p-6 sm:p-10 lg:p-14">
+            <div className="relative flex flex-col bg-main/95 p-5 sm:p-8 lg:p-10">
               <div>
                 <span className="text-xs font-semibold uppercase tracking-[0.18em] text-white/45">
                   Our Approach
@@ -89,18 +90,18 @@ function ProjectManagement() {
                   </span>
                 </h3>
 
-                <p className="mt-4 max-w-md text-sm leading-7 text-white/60">
+                <p className="mt-3 max-w-md text-sm leading-6 text-white/60">
                   From selecting the right solution to completing implementation
                   and training, we stay involved at every critical stage.
                 </p>
               </div>
 
               {/* Steps */}
-              <div className="mt-10">
+              <div className="mt-7">
                 {projectSteps.map((step, index) => (
                   <div
                     key={step.number}
-                    className="relative flex gap-5 pb-8 last:pb-0"
+                    className="relative flex gap-4 pb-6 last:pb-0"
                   >
                     {/* Connector */}
                     {index !== projectSteps.length - 1 && (
@@ -118,7 +119,7 @@ function ProjectManagement() {
                         {step.title}
                       </h4>
 
-                      <p className="mt-1 max-w-sm text-sm leading-6 text-white/60">
+                      <p className="mt-1 max-w-sm text-sm leading-5.5 text-white/60">
                         {step.description}
                       </p>
                     </div>
@@ -127,12 +128,12 @@ function ProjectManagement() {
               </div>
 
               {/* Result */}
-              <div className="mt-10 rounded-xl border border-main/10 bg-white p-5">
+              <div className="mt-7 rounded-xl border border-main/10 bg-white p-4">
                 <p className="text-xs font-semibold uppercase tracking-[0.16em] text-main/40">
                   The Result
                 </p>
 
-                <p className="mt-2 text-sm leading-6 text-main/65">
+                <p className="mt-1.5 text-sm leading-5.5 text-main/65">
                   A controlled implementation process with clear milestones,
                   coordinated training, and a smoother path to successful
                   project delivery.
