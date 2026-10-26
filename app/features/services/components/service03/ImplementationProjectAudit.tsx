@@ -1,67 +1,10 @@
 import Reveal from "@/components/shared/Reveal";
-import {
-  BadgeCheck,
-  ClipboardCheck,
-  FileSearch,
-  Gauge,
-  SearchCheck,
-} from "lucide-react";
+import { BadgeCheck } from "lucide-react";
 import { memo } from "react";
-
-const auditAreas = [
-  {
-    icon: SearchCheck,
-    title: "System Evaluation",
-    description:
-      "Evaluate available systems and identify the solution that best fits your company.",
-  },
-  {
-    icon: ClipboardCheck,
-    title: "Implementation Audit",
-    description:
-      "Review implementation activities to ensure every task follows the agreed plan.",
-  },
-  {
-    icon: Gauge,
-    title: "Milestone Monitoring",
-    description:
-      "Monitor deadlines, milestones, and the progress of each implementation stage.",
-  },
-  {
-    icon: FileSearch,
-    title: "Detailed Reporting",
-    description:
-      "Provide detailed reports covering the efficiency and completion of implemented tasks.",
-  },
-];
-
-const auditStages = [
-  {
-    number: "01",
-    title: "Evaluate",
-    description:
-      "Assess available systems against your company's requirements.",
-  },
-  {
-    number: "02",
-    title: "Audit",
-    description:
-      "Review the implementation plan, requirements, and project activities.",
-  },
-  {
-    number: "03",
-    title: "Monitor",
-    description: "Follow every task and milestone to ensure timely delivery.",
-  },
-  {
-    number: "04",
-    title: "Report",
-    description:
-      "Deliver detailed findings and progress reports for informed decisions.",
-  },
-];
+import { implementationProjectAuditServices } from "../../data/service03";
 
 function ImplementationProjectAudit() {
+  const { auditAreas, auditStages } = implementationProjectAuditServices;
   return (
     <section className="container mx-auto mt-16 px-4 sm:mt-20 sm:px-6 lg:px-8">
       <Reveal>
