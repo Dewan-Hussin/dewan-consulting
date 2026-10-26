@@ -32,6 +32,10 @@ const navLinks = [
         href: "/services/implementation-project-audit",
         label: "Implementation Project Audit",
       },
+      {
+        href: "/services/tailored-project-development",
+        label: "Tailored Project Development",
+      },
     ],
   },
   {
