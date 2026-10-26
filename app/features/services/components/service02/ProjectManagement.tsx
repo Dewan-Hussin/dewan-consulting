@@ -1,41 +1,10 @@
 import Reveal from "@/components/shared/Reveal";
 import { NotebookPen, ShieldCheck } from "lucide-react";
 import { memo } from "react";
-
-const projectSteps = [
-  {
-    number: "01",
-    title: "Select",
-    description: "Find the right solution and evaluate suitable offers.",
-  },
-  {
-    number: "02",
-    title: "Plan",
-    description: "Coordinate the implementation plan and project requirements.",
-  },
-  {
-    number: "03",
-    title: "Monitor",
-    description: "Track progress, deadlines, and implementation activities.",
-  },
-  {
-    number: "04",
-    title: "Deliver",
-    description:
-      "Coordinate training sessions and ensure a successful handover.",
-  },
-];
-
-const managedAreas = [
-  "System & solution selection",
-  "Implementation planning",
-  "Project deadlines",
-  "Implementation progress",
-  "Training coordination",
-  "Final delivery & handover",
-];
+import { projectManagementService } from "../../data/service02";
 
 function ProjectManagement() {
+  const { projectSteps, managedAreas } = projectManagementService;
   return (
     <section className="container mx-auto mt-16 px-4 sm:mt-20 sm:px-6 lg:px-8">
       <Reveal>

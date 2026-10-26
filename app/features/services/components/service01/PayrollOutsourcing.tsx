@@ -2,7 +2,7 @@
 import { ArrowUpRight, Banknote, LockKeyhole, ShieldCheck } from "lucide-react";
 import { memo } from "react";
 import Reveal from "@/components/shared/Reveal";
-import { payrollOutsourcingService } from "../../data/services";
+import { payrollOutsourcingService } from "../../data/services01";
 
 function PayrollOutsourcing() {
   const { payrollReports, benefits, payrollSteps } = payrollOutsourcingService;
