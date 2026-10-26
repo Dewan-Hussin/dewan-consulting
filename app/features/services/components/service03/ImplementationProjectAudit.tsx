@@ -8,11 +8,11 @@ function ImplementationProjectAudit() {
   return (
     <section className="container mx-auto mt-16 px-4 sm:mt-20 sm:px-6 lg:px-8">
       <Reveal>
-        <div className="relative overflow-hidden rounded-2xl border border-main/10 bg-white shadow-sm">
+        <div className="relative overflow-hidden rounded-2xl border border-main/10 bg-white shadow-sm transform scale-95">
           {/* Decorative element */}
           <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-second/70 blur-3xl" />
 
-          <div className="relative grid lg:grid-cols-[1.05fr_0.95fr]">
+          <div className="relative grid lg:grid-cols-1">
             {/* LEFT — Introduction */}
             <div className="p-6 sm:p-10 lg:p-14">
               <div className="flex items-center gap-3">
@@ -46,7 +46,7 @@ function ImplementationProjectAudit() {
               </p>
 
               {/* Before / After */}
-              <div className="mt-10 grid gap-4 border-t border-main/10 pt-8 sm:grid-cols-2">
+              <div className="mt-5 grid gap-4 border-t border-main/10 pt-8 sm:grid-cols-2">
                 <div className="rounded-xl border border-main/10 bg-main/90 p-5">
                   <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-white/40">
                     Before Purchase
@@ -101,22 +101,25 @@ function ImplementationProjectAudit() {
               </div>
 
               {/* Audit stages */}
-              <div className="mt-10 grid gap-3">
-                {auditStages.map((stage) => (
+              <div className="mt-8 space-y-0">
+                {auditStages.map((stage, index) => (
                   <div
                     key={stage.number}
-                    className="group flex gap-4 rounded-xl border border-main/10 bg-white p-4 transition-all duration-300 hover:border-main/20 hover:shadow-sm"
+                    className="relative flex gap-4 pb-7 last:pb-0"
                   >
-                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-main text-xs font-semibold text-white">
+
+                    {index !== 3 && (
+                        <span className="absolute left-4.25 top-10 h-[calc(100%-30px)] w-px bg-second/15" />
+                      )}
+                    <span className="relative z-10 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-second/15 bg-white text-xs font-semibold text-main">
                       {stage.number}
                     </span>
 
-                    <div>
-                      <h4 className="text-sm font-semibold text-main">
+                    <div className="pt-1">
+                      <h4 className="text-sm font-semibold text-white">
                         {stage.title}
                       </h4>
-
-                      <p className="mt-1 text-sm leading-6 text-main/60">
+                      <p className="mt-1 text-sm leading-6 text-white/60">
                         {stage.description}
                       </p>
                     </div>
@@ -125,7 +128,7 @@ function ImplementationProjectAudit() {
               </div>
 
               {/* Outcome */}
-              <div className="mt-auto pt-8">
+              {/* <div className="mt-auto pt-8">
                 <div className="flex items-start gap-3 rounded-xl border border-main/10 bg-white p-5">
                   <BadgeCheck
                     size={19}
@@ -144,7 +147,7 @@ function ImplementationProjectAudit() {
                     </p>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

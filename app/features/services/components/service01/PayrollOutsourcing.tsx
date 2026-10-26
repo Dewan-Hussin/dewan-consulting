@@ -3,6 +3,7 @@ import { ArrowUpRight, Banknote, LockKeyhole, ShieldCheck } from "lucide-react";
 import { memo } from "react";
 import Reveal from "@/components/shared/Reveal";
 import { payrollOutsourcingService } from "../../data/service01";
+import { cn } from "@/lib/utils";
 
 function PayrollOutsourcing() {
   const { payrollReports, benefits, payrollSteps } = payrollOutsourcingService;
@@ -11,10 +12,15 @@ function PayrollOutsourcing() {
       {/* Services Overview */}
       <section className="container mx-auto mt-16 px-4 sm:mt-20 sm:px-6 lg:px-8">
         <Reveal>
-          <div className="relative overflow-hidden rounded-2xl border border-main/30 bg-white shadow-xs">
+          <div className="relative overflow-hidden rounded-2xl border border-main/30 bg-white shadow-xs transform scale-95">
             {/* <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-second/70 blur-3xl" /> */}
 
-            <div className="relative grid lg:grid-cols-[1.05fr_0.95fr]">
+            <div
+              className={cn(
+                "relative grid lg:grid-cols-[1.05fr_0.95fr]",
+                //  "relative grid lg:grid-cols-1 ",
+                )}
+            >
               {/* LEFT — Service Introduction */}
               <div className="p-6 sm:p-10 lg:p-14">
                 <div className="flex items-center gap-3">

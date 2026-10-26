@@ -8,11 +8,11 @@ function ProjectManagement() {
   return (
     <section className="container mx-auto mt-16 px-4 sm:mt-20 sm:px-6 lg:px-8">
       <Reveal>
-        <div className="relative overflow-hidden rounded-2xl border border-main/10 bg-white shadow-sm">
+        <div className="relative overflow-hidden rounded-2xl border border-main/10 bg-white shadow-sm transform scale-95">
           {/* Decorative element */}
           <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-second/70 blur-3xl" />
 
-          <div className="relative grid lg:grid-cols-[0.9fr_1.1fr]">
+          <div className="relative grid lg:grid-cols-1">
             {/* LEFT — Introduction */}
             <div className="p-6 sm:p-10 lg:p-14">
               <div className="flex items-center gap-3">
