@@ -26,7 +26,7 @@ function TailoredProjectDevelopment() {
     <section className="container mx-auto mt-10 px-4 sm:mt-12 sm:px-6 lg:px-8">
       {/* Main Service Introduction */}
       <Reveal>
-        <div className="relative overflow-hidden rounded-2xl border border-main/10 bg-white shadow-sm">
+        <div className="relative overflow-hidden rounded-2xl border border-main/10 bg-white shadow-sm dark:border-white/10 dark:bg-[#1e1e1e]">
           <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-second/70 blur-3xl" />
 
           <div className="relative grid lg:grid-cols-[1fr_0.8fr]">
@@ -42,21 +42,21 @@ function TailoredProjectDevelopment() {
                 </span>
               </div>
 
-              <h2 className="mt-5 text-3xl font-semibold leading-tight tracking-tight text-main sm:text-4xl">
+              <h2 className="mt-5 text-3xl font-semibold leading-tight tracking-tight text-main sm:text-4xl dark:text-white">
                 Tailored Project
-                <span className="block text-main/55">
+                <span className="block text-main/55 dark:text-white/55">
                   Development
                 </span>
               </h2>
 
-              <p className="mt-5 text-base leading-7 text-main/70">
+              <p className="mt-5 text-base leading-7 text-main/70 dark:text-white/65">
                 Every business has its own processes, challenges, and
                 requirements. Our Tailored Project Development service
                 transforms your operational needs into custom-built systems
                 designed around the way your business works.
               </p>
 
-              <p className="mt-3 text-sm leading-6 text-main/60">
+              <p className="mt-3 text-sm leading-6 text-main/60 dark:text-white/55">
                 We work with you to understand your challenges, identify
                 opportunities for improvement, and develop practical solutions
                 that simplify daily operations, organize information, and
@@ -64,7 +64,7 @@ function TailoredProjectDevelopment() {
               </p>
 
               {/* Capabilities */}
-              <div className="mt-7 border-t border-main/10 pt-6">
+              <div className="mt-7 border-t border-main/10 pt-6 dark:border-white/10">
                 <span className="text-xs font-semibold uppercase tracking-[0.18em] text-main/45">
                   Our Capabilities
                 </span>
@@ -81,7 +81,7 @@ function TailoredProjectDevelopment() {
                         className="mt-0.5 shrink-0 text-main/60"
                       />
 
-                      <span className="text-sm leading-6 text-main/65">
+                      <span className="text-sm leading-6 text-main/65 dark:text-white/60">
                         {feature}
                       </span>
                     </div>
@@ -143,17 +143,17 @@ function TailoredProjectDevelopment() {
 
       {/* Featured Projects */}
       <div className="mt-16 sm:mt-20">
-        <div className="border-b border-main/10 pb-6">
+        <div className="border-b border-main/10 pb-6 dark:border-white/10">
           <Reveal>
             <span className="text-xs font-semibold uppercase tracking-[0.18em] text-main/45">
               Selected Projects
             </span>
 
-            <h2 className="mt-3 text-3xl font-semibold tracking-tight text-main sm:text-4xl">
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight text-main sm:text-4xl dark:text-white">
               Solutions built for real-world needs
             </h2>
 
-            <p className="mt-3 max-w-2xl text-sm leading-6 text-main/60 sm:text-base">
+            <p className="mt-3 max-w-2xl text-sm leading-6 text-main/60 sm:text-base dark:text-white/55">
               Explore examples of tailored systems developed to manage
               specialized operations, organize complex data, and support
               informed decision-making.
@@ -164,7 +164,7 @@ function TailoredProjectDevelopment() {
         <div className="mt-6 grid gap-5 lg:grid-cols-2">
           {/* Project 01: Squash Association */}
           <Reveal delay={0}>
-            <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-main/10 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-main/20 hover:shadow-xl hover:shadow-main/5">
+            <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-main/10 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-main/20 hover:shadow-xl hover:shadow-main/5 dark:border-white/10 dark:bg-[#1e1e1e] dark:hover:border-white/20">
               {/* Project Header */}
               <div className="relative overflow-hidden bg-main/95 p-5 sm:p-7">
                 <div className="pointer-events-none absolute -right-10 -top-10 h-40 w-40 rounded-full border border-main/10" />
@@ -199,7 +199,7 @@ function TailoredProjectDevelopment() {
                 <div className="flex items-center gap-2">
                   <Users size={17} className="text-main/55" />
 
-                  <h4 className="text-sm font-semibold text-main">
+                  <h4 className="text-sm font-semibold text-main dark:text-white">
                     Key Capabilities
                   </h4>
                 </div>
@@ -216,14 +216,14 @@ function TailoredProjectDevelopment() {
                         strokeWidth={1.8}
                       />
 
-                      <span className="text-sm leading-6 text-main/65">
+                      <span className="text-sm leading-6 text-main/65 dark:text-white/60">
                         {feature}
                       </span>
                     </div>
                   ))}
                 </div>
 
-                <div className="mt-6 border-t border-main/10 pt-5">
+                <div className="mt-6 border-t border-main/10 pt-5 dark:border-white/10">
                   <div className="flex items-start gap-3">
                     <BarChart3
                       size={19}
@@ -231,11 +231,11 @@ function TailoredProjectDevelopment() {
                     />
 
                     <div>
-                      <h4 className="text-sm font-semibold text-main">
+                      <h4 className="text-sm font-semibold text-main dark:text-white">
                         Business Value
                       </h4>
 
-                      <p className="mt-1 text-sm leading-6 text-main/60">
+                      <p className="mt-1 text-sm leading-6 text-main/60 dark:text-white/55">
                         Centralized player information, organized championship
                         operations, and accessible historical records and
                         performance reports.
@@ -249,7 +249,7 @@ function TailoredProjectDevelopment() {
 
           {/* Project 02: Airline Invoicing */}
           <Reveal delay={100}>
-            <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-main/10 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-main/20 hover:shadow-xl hover:shadow-main/5">
+            <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-main/10 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-main/20 hover:shadow-xl hover:shadow-main/5 dark:border-white/10 dark:bg-[#1e1e1e] dark:hover:border-white/20">
               {/* Project Header */}
               <div className="relative overflow-hidden bg-main/95 p-5 sm:p-7">
                 <div className="pointer-events-none absolute -right-10 -top-10 h-40 w-40 rounded-full border border-main/10" />
@@ -284,7 +284,7 @@ function TailoredProjectDevelopment() {
                 <div className="flex items-center gap-2">
                   <FileText size={17} className="text-main/55" />
 
-                  <h4 className="text-sm font-semibold text-main">
+                  <h4 className="text-sm font-semibold text-main dark:text-white">
                     Key Capabilities
                   </h4>
                 </div>
@@ -301,14 +301,14 @@ function TailoredProjectDevelopment() {
                         strokeWidth={1.8}
                       />
 
-                      <span className="text-sm leading-6 text-main/65">
+                      <span className="text-sm leading-6 text-main/65 dark:text-white/60">
                         {feature}
                       </span>
                     </div>
                   ))}
                 </div>
 
-                <div className="mt-6 border-t border-main/10 pt-5">
+                <div className="mt-6 border-t border-main/10 pt-5 dark:border-white/10">
                   <div className="flex items-start gap-3">
                     <BarChart3
                       size={19}
@@ -316,11 +316,11 @@ function TailoredProjectDevelopment() {
                     />
 
                     <div>
-                      <h4 className="text-sm font-semibold text-main">
+                      <h4 className="text-sm font-semibold text-main dark:text-white">
                         Business Value
                       </h4>
 
-                      <p className="mt-1 text-sm leading-6 text-main/60">
+                      <p className="mt-1 text-sm leading-6 text-main/60 dark:text-white/55">
                         Structured service calculations and reporting across
                         holding company, airport, aircraft type, and individual
                         service levels.
@@ -336,13 +336,13 @@ function TailoredProjectDevelopment() {
 
       {/* Closing Statement */}
       <Reveal>
-        <div className="mt-12 flex flex-col gap-4 border-t border-main/10 pt-6 sm:mt-16 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-12 flex flex-col gap-4 border-t border-main/10 pt-6 sm:mt-16 sm:flex-row sm:items-center sm:justify-between dark:border-white/10">
           <div>
-            <h2 className="text-xl font-semibold text-main">
+            <h2 className="text-xl font-semibold text-main dark:text-white">
               Have a unique business challenge?
             </h2>
 
-            <p className="mt-2 max-w-2xl text-sm leading-6 text-main/60">
+            <p className="mt-2 max-w-2xl text-sm leading-6 text-main/60 dark:text-white/55">
               We develop tailored systems that address your specific operational
               requirements and business processes.
             </p>

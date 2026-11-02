@@ -9,7 +9,7 @@ function ProjectManagement() {
   return (
     <section className="container mx-auto mt-10 px-4 sm:mt-12 sm:px-6 lg:px-8">
       <Reveal>
-        <div className="relative overflow-hidden rounded-2xl border border-main/10 bg-white shadow-sm">
+        <div className="relative overflow-hidden rounded-2xl border border-main/10 bg-white shadow-sm dark:border-white/10 dark:bg-[#1e1e1e]">
           {/* Decorative element */}
           <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-second/70 blur-3xl" />
 
@@ -26,19 +26,19 @@ function ProjectManagement() {
                 </span>
               </div>
 
-              <h2 className="mt-5 text-3xl font-semibold leading-tight tracking-tight text-main sm:text-4xl">
+              <h2 className="mt-5 text-3xl font-semibold leading-tight tracking-tight text-main sm:text-4xl dark:text-white">
                 Project
-                <span className="block text-main/55">Management</span>
+                <span className="block text-main/55 dark:text-white/55">Management</span>
               </h2>
 
-              <p className="mt-5 text-base leading-7 text-main/70">
+              <p className="mt-5 text-base leading-7 text-main/70 dark:text-white/65">
                 Implementing a project or acquiring a new system can be
                 challenging when it falls outside your area of expertise. Our
                 project management service gives you the support and control you
                 need throughout the entire process.
               </p>
 
-              <p className="mt-3 text-sm leading-6 text-main/60">
+              <p className="mt-3 text-sm leading-6 text-main/60 dark:text-white/55">
                 We manage the project from finding the right offer through
                 implementation planning, deadline monitoring, and required
                 training sessions. This allows you to focus on your core
@@ -46,9 +46,9 @@ function ProjectManagement() {
               </p>
 
               {/* Managed Areas */}
-              <div className="mt-7 border-t border-main/10 pt-6">
+              <div className="mt-7 border-t border-main/10 pt-6 dark:border-white/10">
                 <div className="flex items-center justify-between">
-                  <h3 className="text-sm font-semibold text-main">
+                  <h3 className="text-sm font-semibold text-main dark:text-white">
                     What we manage
                   </h3>
 
@@ -61,7 +61,7 @@ function ProjectManagement() {
                   {managedAreas.map((area) => (
                     <div
                       key={area}
-                      className="flex items-start gap-2.5 text-sm text-main/65"
+                      className="flex items-start gap-2.5 text-sm text-main/65 dark:text-white/60"
                     >
                       <ShieldCheck
                         size={16}
@@ -128,7 +128,7 @@ function ProjectManagement() {
               </div>
 
               {/* Result */}
-              <div className="mt-7 rounded-xl border border-main/10 bg-white p-4">
+              <div className="mt-7 rounded-xl border border-main/10 bg-white p-4 dark:border-white/10 dark:bg-white/5">
                 <p className="text-xs font-semibold uppercase tracking-[0.16em] text-main/40">
                   The Result
                 </p>

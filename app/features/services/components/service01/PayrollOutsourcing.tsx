@@ -19,7 +19,7 @@ function PayrollOutsourcing() {
       {/* Services Overview */}
       <section className="container mx-auto mt-10 px-4 sm:mt-12 sm:px-6 lg:px-8">
         <Reveal>
-          <div className="relative mx-auto w-[95%] overflow-hidden rounded-2xl border border-main/10 bg-white shadow-sm">
+          <div className="relative mx-auto w-[95%] overflow-hidden rounded-2xl border border-main/10 bg-white shadow-sm dark:border-white/10 dark:bg-[#1e1e1e]">
             <div className="relative grid lg:grid-cols-[1.05fr_0.95fr]">
               {/* LEFT — Service Introduction */}
               <div className="p-5 sm:p-8 lg:p-10">
@@ -33,18 +33,18 @@ function PayrollOutsourcing() {
                   </span>
                 </div>
 
-                <h2 className="mt-5 text-3xl font-semibold tracking-tight text-main sm:text-4xl">
+                <h2 className="mt-5 text-3xl font-semibold tracking-tight text-main sm:text-4xl dark:text-white">
                   Payroll
                   <span className="block">Outsourcing</span>
                 </h2>
 
-                <p className="mt-5 text-base leading-7 text-main/65">
+                <p className="mt-5 text-base leading-7 text-main/65 dark:text-white/65">
                   Simplify your monthly payroll operations with a reliable,
                   confidential, and efficient outsourcing service that takes the
                   complexity out of salary processing.
                 </p>
 
-                <p className="my-3 text-sm leading-6 text-main/60">
+                <p className="my-3 text-sm leading-6 text-main/60 dark:text-white/55">
                   Our experienced team processes employee transactions, performs
                   salary calculations, and prepares the reports your
                   organization needs, with the flexibility to adapt reporting
@@ -52,7 +52,7 @@ function PayrollOutsourcing() {
                 </p>
 
                 {/* Benefits */}
-                <div className="space-y-3 border-t border-main/10 pt-5">
+                <div className="space-y-3 border-t border-main/10 pt-5 dark:border-white/10">
                   {benefits.map((benefit) => (
                     <div key={benefit} className="flex items-start gap-3">
                       <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-main/10">
@@ -63,7 +63,7 @@ function PayrollOutsourcing() {
                         />
                       </span>
 
-                      <p className="text-sm leading-5.5 text-main/75">
+                      <p className="text-sm leading-5.5 text-main/75 dark:text-white/70">
                         {benefit}
                       </p>
                     </div>
@@ -117,7 +117,7 @@ function PayrollOutsourcing() {
                 </div>
 
                 {/* Confidentiality */}
-                <div className="mt-6 flex items-start gap-3 rounded-lg border border-main/10 bg-white p-4">
+                <div className="mt-6 flex items-start gap-3 rounded-lg border border-main/10 bg-white p-4 dark:border-white/10 dark:bg-white/5">
                   <LockKeyhole
                     size={18}
                     className="mt-0.5 shrink-0 text-main/70"
@@ -136,10 +136,10 @@ function PayrollOutsourcing() {
 
       {/* Reports Grid */}
       <section className="container mx-auto mt-16 px-4 sm:mt-20 sm:px-6 lg:px-8">
-        <div className="flex flex-col gap-4 border-b border-main/10 pb-6 sm:flex-row sm:items-end sm:justify-between">
+        <div className="flex flex-col gap-4 border-b border-main/10 pb-6 sm:flex-row sm:items-end sm:justify-between dark:border-white/10">
           <div>
             <Reveal delay={80} className="mt-3">
-              <h2 className="text-3xl font-semibold tracking-tight text-main sm:text-4xl">
+              <h2 className="text-3xl font-semibold tracking-tight text-main sm:text-4xl dark:text-white">
                 Comprehensive payroll reports
               </h2>
             </Reveal>
@@ -152,7 +152,7 @@ function PayrollOutsourcing() {
 
             return (
               <Reveal key={report.number} delay={(index % 3) * 70}>
-                <article className="group flex h-full min-h-48 flex-col rounded-xl border border-main/10 bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:border-main/25 hover:shadow-lg hover:shadow-main/5 sm:p-6">
+                <article className="group flex h-full min-h-48 flex-col rounded-xl border border-main/10 bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:border-main/25 hover:shadow-lg hover:shadow-main/5 sm:p-6 dark:border-white/10 dark:bg-white/5 dark:hover:border-white/20">
                   <div className="flex items-center justify-between">
                     <span className="text-xs font-semibold tracking-[0.15em] text-main/35">
                       {report.number}
@@ -163,11 +163,11 @@ function PayrollOutsourcing() {
                     </span>
                   </div>
 
-                  <h3 className="mt-5 text-lg font-semibold text-main">
+                  <h3 className="mt-5 text-lg font-semibold text-main dark:text-white">
                     {report.title}
                   </h3>
 
-                  <p className="mt-2 text-sm leading-6 text-main/60">
+                  <p className="mt-2 text-sm leading-6 text-main/60 dark:text-white/55">
                     {report.description}
                   </p>
 

@@ -29,7 +29,7 @@ const ServicesSectionCard = ({ cardData }: Props) => {
           <Card
             className={cn(
               "relative z-10 flex h-full flex-col overflow-hidden",
-              "border-0 bg-second/10 text-main shadow-none",
+              "border-0 bg-second/10 text-main shadow-none dark:bg-white/5 dark:text-white",
               "transition-all duration-300 ease-in-out",
               "group-hover:scale-[1.01]",
               "group-hover:backdrop-blur-[20px]",
@@ -42,7 +42,7 @@ const ServicesSectionCard = ({ cardData }: Props) => {
               </CardTitle>
             </CardHeader>
 
-            <CardContent className="min-h-0 flex-1 overflow-y-auto px-5 pb-4 text-main/70 group-hover:text-white/70 duration-300 transition-all text-center">
+            <CardContent className="min-h-0 flex-1 overflow-y-auto px-5 pb-4 text-main/70 group-hover:text-white/70 duration-300 transition-all text-center dark:text-white/60">
               <p className="whitespace-pre-line wrap-break-word text-sm leading-7 ">
                 {cardData.description}
               </p>

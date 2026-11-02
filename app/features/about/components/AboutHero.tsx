@@ -5,7 +5,7 @@ import { SectionEyebrow } from "../../../../components/shared/SectionEyebrow";
 
 export default function AboutHero() {
   return (
-    <section className="relative min-h-svh w-full overflow-hidden bg-second/50 text-main/50 py-20">
+    <section className="relative min-h-svh w-full overflow-hidden bg-second/50 text-main/50 py-20 dark:bg-background dark:text-white/50">
       <div className="relative mx-auto flex min-h-svh max-w-7xl flex-col px-4 pb-10 sm:px-6 lg:px-8">
         <div className="flex flex-1 flex-col justify-center gap-7 ">
           <Reveal>
@@ -15,12 +15,12 @@ export default function AboutHero() {
           <Reveal delay={90}>
             <h1 className="max-w-4xl text-balance text-4xl font-bold leading-[1.04] sm:text-6xl lg:text-7xl">
               Software for the systems that{" "}
-              <span className="text-main ">keep work moving.</span>
+              <span className="text-main dark:text-white ">keep work moving.</span>
             </h1>
           </Reveal>
 
           <Reveal delay={170}>
-            <p className="max-w-2xl text-pretty text-base leading-relaxed text-main/80 sm:text-lg">
+            <p className="max-w-2xl text-pretty text-base leading-relaxed text-main/80 sm:text-lg dark:text-white/70">
               Dewan Consulting designs and runs the systems behind payday, the
               freight invoice, the attendance sheet and the year-end ledger —
               and then stays to make sure they hold.
@@ -31,14 +31,14 @@ export default function AboutHero() {
             <div className="flex flex-wrap items-center gap-4">
               <Link
                 href="/contact-us"
-                className="group inline-flex h-12 items-center gap-2.5 rounded-xl bg-main px-6 text-sm font-semibold text-white shadow-lg shadow-main/25 transition-all duration-300 hover:-translate-y-0.5 hover:bg-transparent hover:text-main border border-main/20 hover:border-main/30 focus-visible:ring-3 focus-visible:ring-main/50"
+                className="group inline-flex h-12 items-center gap-2.5 rounded-xl bg-main px-6 text-sm font-semibold text-white shadow-lg shadow-main/25 transition-all duration-300 hover:-translate-y-0.5 hover:bg-transparent hover:text-main border border-main/20 hover:border-main/30 focus-visible:ring-3 focus-visible:ring-main/50 dark:hover:text-white dark:hover:bg-white/10"
               >
                 Start a conversation
                 <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 rtl:-scale-x-100" />
               </Link>
               <Link
                 href="/services"
-                className="group inline-flex h-12 items-center gap-2.5 rounded-xl border border-main/20 px-6 text-sm font-semibold text-main/90 transition-all duration-300 hover:border-main/30 hover:bg-main hover:text-white focus-visible:ring-3 focus-visible:ring-black/40"
+                className="group inline-flex h-12 items-center gap-2.5 rounded-xl border border-main/20 px-6 text-sm font-semibold text-main/90 transition-all duration-300 hover:border-main/30 hover:bg-main hover:text-white focus-visible:ring-3 focus-visible:ring-black/40 dark:text-white/80 dark:border-white/20 dark:hover:border-white/30 dark:hover:bg-white/10"
               >
                 See what we ship
               </Link>

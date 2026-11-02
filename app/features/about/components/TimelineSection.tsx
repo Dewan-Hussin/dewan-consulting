@@ -42,7 +42,7 @@ const milestones = [
 
 export default function TimelineSection() {
   return (
-    <section className="relative bg-paper text-navy-950">
+    <section className="relative bg-paper text-navy-950 dark:bg-[#141414] dark:text-white">
       <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 md:py-28 lg:px-8">
         <div className="mb-14 max-w-2xl">
           <Reveal>
@@ -55,13 +55,13 @@ export default function TimelineSection() {
             </h2>
           </Reveal>
           <Reveal delay={160}>
-            <p className="mt-5 text-pretty leading-relaxed text-navy-950/60">
+            <p className="mt-5 text-pretty leading-relaxed text-navy-950/60 dark:text-white/55">
               History, as kept by a company that logs its own change requests.
             </p>
           </Reveal>
         </div>
 
-        <ol className="relative ms-2 space-y-12 border-s border-navy-950/15 ps-8 sm:ps-10">
+        <ol className="relative ms-2 space-y-12 border-s border-navy-950/15 ps-8 sm:ps-10 dark:border-white/15">
           {milestones.map((item, i) => (
             <li key={item.year} className="relative">
               <span
@@ -73,14 +73,14 @@ export default function TimelineSection() {
                   <span className="text-sm font-bold tabular-nums tracking-[0.2em] text-brand">
                     {item.year}
                   </span>
-                  <span className="rounded-full border border-navy-950/15 px-2.5 py-0.5 text-[0.65rem] font-semibold uppercase tracking-[0.15em] text-navy-950/60">
+                  <span className="rounded-full border border-navy-950/15 px-2.5 py-0.5 text-[0.65rem] font-semibold uppercase tracking-[0.15em] text-navy-950/60 dark:border-white/15 dark:text-white/60">
                     {item.tag}
                   </span>
                 </div>
                 <h3 className="mt-3 text-xl font-bold tracking-tight sm:text-2xl">
                   {item.title}
                 </h3>
-                <p className="mt-2 max-w-2xl text-pretty leading-relaxed text-navy-950/60">
+                <p className="mt-2 max-w-2xl text-pretty leading-relaxed text-navy-950/60 dark:text-white/55">
                   {item.body}
                 </p>
               </Reveal>

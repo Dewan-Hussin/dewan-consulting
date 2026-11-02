@@ -11,7 +11,7 @@ export default function ServicesSection() {
         className={cn(
           "services-sec",
           "relative w-full overflow-hidden font-sans ",
-          " bg-white ",
+          " bg-white dark:bg-background ",
           "py-16",
           "",
         )}
@@ -32,7 +32,7 @@ export default function ServicesSection() {
             <h2 id="services-title">
               <span
                 className={cn(
-                  `block text-xl md:text-2xl text-main lg:text-4xl font-bold tracking-tight animate-in slide-in-from-bottom-8 duration-700 fade-in delay-15`,
+                  `block text-xl md:text-2xl text-main dark:text-white lg:text-4xl font-bold tracking-tight animate-in slide-in-from-bottom-8 duration-700 fade-in delay-15`,
                   "text-shadow-background ",
                   "",
                 )}
@@ -41,7 +41,7 @@ export default function ServicesSection() {
               </span>
             </h2>
             <p>
-              <span className="text-main/60 font-semibold text-xs md:text-sm lg:text-md leading-relaxed max-w-2xl">
+              <span className="text-main/60 dark:text-white/60 font-semibold text-xs md:text-sm lg:text-md leading-relaxed max-w-2xl">
                 Our Services are composed of: payroll outsourcing services,
                 project management and implementation project audit, and
                 Tailored Project Implementation.

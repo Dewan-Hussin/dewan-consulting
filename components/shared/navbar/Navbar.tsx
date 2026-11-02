@@ -132,9 +132,9 @@ export default function Navbar() {
                               : "invisible -translate-y-2 opacity-0 pointer-events-none",
                           )}
                         >
-                          <div className="overflow-hidden rounded-xl border border-gray-200 bg-white p-2 shadow-xl shadow-black/10">
+                          <div className="overflow-hidden rounded-xl border border-gray-200 bg-white p-2 shadow-xl shadow-black/10 dark:border-white/10 dark:bg-[#1e1e1e]">
                             <div className="px-3 pb-2 pt-1">
-                              <p className="text-[10px] font-semibold uppercase tracking-[0.15em] text-gray-400">
+                              <p className="text-[10px] font-semibold uppercase tracking-[0.15em] text-gray-400 dark:text-white/40">
                                 Our Services
                               </p>
                             </div>
@@ -149,8 +149,8 @@ export default function Navbar() {
                                   "text-sm font-medium",
                                   "transition-all duration-200",
                                   isActive(child.href)
-                                    ? "bg-main/5 text-main"
-                                    : "text-gray-600 hover:bg-gray-50 hover:text-main",
+                                    ? "bg-main/5 text-main dark:bg-white/8 dark:text-white"
+                                    : "text-gray-600 hover:bg-gray-50 hover:text-main dark:text-white/70 dark:hover:bg-white/8 dark:hover:text-white",
                                 )}
                               >
                                 <span>{child.label}</span>

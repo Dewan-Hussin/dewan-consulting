@@ -9,7 +9,7 @@ export default function OurCompany() {
     <section
       id="ourCompany"
       className={cn(
-        "ourCompany-sec relative w-full overflow-hidden bg-main/5 py-20 font-sans",
+        "ourCompany-sec relative w-full overflow-hidden bg-main/5 py-20 font-sans dark:bg-main/10",
         "md:py-24 lg:py-28",
       )}
       aria-labelledby="our-company-title"
@@ -143,7 +143,7 @@ export default function OurCompany() {
             <div
               className={cn(
                 "relative aspect-4/3 w-full overflow-hidden rounded-2xl",
-                "border border-white bg-white shadow-2xl shadow-main/15",
+                "border border-white bg-white shadow-2xl shadow-main/15 dark:border-white/10 dark:bg-[#1e1e1e]",
               )}
             >
               <Image
@@ -171,7 +171,7 @@ export default function OurCompany() {
               className={cn(
                 "absolute -bottom-7 left-5 flex items-center gap-3",
                 "rounded-xl border border-main/10 bg-white px-5 py-3",
-                "shadow-xl shadow-main/15",
+                "shadow-xl shadow-main/15 dark:border-white/10 dark:bg-[#1e1e1e]",
                 "sm:left-8",
               )}
             >
@@ -180,9 +180,9 @@ export default function OurCompany() {
               </div>
 
               <div>
-                <p className="text-xl font-bold leading-none text-main">1987</p>
+                <p className="text-xl font-bold leading-none text-main dark:text-white">1987</p>
 
-                <p className="mt-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-main/45">
+                <p className="mt-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-main/45 dark:text-white/45">
                   Our Beginning
                 </p>
               </div>

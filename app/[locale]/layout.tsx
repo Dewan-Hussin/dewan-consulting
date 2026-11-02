@@ -10,6 +10,7 @@ import { cn } from "@/lib/utils";
 
 import Navbar from "@/components/shared/navbar/Navbar";
 import PalettePanel from "@/components/shared/palette/PalettePanel";
+import { ThemeScript } from "@/components/shared/palette/ThemeScript";
 
 const geist = localFont({
   src: [
@@ -81,7 +82,11 @@ export default async function RootLayout({
       dir={dir}
       className={`${geist.variable} ${cairo.variable} scroll-smooth`}
       data-scroll-behavior="smooth"
+      suppressHydrationWarning
     >
+      <head>
+        <ThemeScript />
+      </head>
       <body
         className={cn(
           "h-full antialiased",
@@ -90,7 +95,7 @@ export default async function RootLayout({
       >
         <NextIntlClientProvider messages={messages}>
           <Navbar />
-          {/* <PalettePanel /> */}
+          <PalettePanel />
           {children}
         </NextIntlClientProvider>
       </body>

@@ -36,14 +36,14 @@ export default function AboutUs() {
           <div
             className={cn(
               "relative overflow-hidden rounded-2xl border border-white/40",
-              "bg-white/95 p-6 shadow-xl shadow-black/10",
+              "bg-white/95 p-6 shadow-xl shadow-black/10 dark:border-white/10 dark:bg-[#1e1e1e]",
               "sm:p-8 lg:p-10",
             )}
           >
             {/* Small accent */}
             <div
               aria-hidden="true"
-              className="absolute left-0 top-0 h-full w-1 bg-main/80"
+              className="absolute left-0 top-0 h-full w-1 bg-main/80 dark:bg-accent-brand"
             />
 
             <div className="space-y-6">
@@ -51,7 +51,7 @@ export default function AboutUs() {
               <div className="flex items-center gap-3">
                 <span className="h-px w-8 bg-main/80" />
 
-                <span className="text-xs font-bold uppercase tracking-[0.2em] text-main/80">
+                <span className="text-xs font-bold uppercase tracking-[0.2em] text-main/80 dark:text-white/60">
                   About Dewan
                 </span>
               </div>
@@ -61,26 +61,26 @@ export default function AboutUs() {
                 <h2
                   id="about-title"
                   className={cn(
-                    "text-3xl font-bold tracking-tight text-main",
+                    "text-3xl font-bold tracking-tight text-main dark:text-white",
                     "sm:text-4xl lg:text-5xl",
                   )}
                 >
                   Why Choose Us
                 </h2>
 
-                <div className="h-1 w-14 rounded-full bg-main" />
+                <div className="h-1 w-14 rounded-full bg-main dark:bg-accent-brand" />
               </div>
 
               {/* Main statement */}
-              <p className="text-base font-medium leading-relaxed text-main/70 sm:text-lg">
+              <p className="text-base font-medium leading-relaxed text-main/70 sm:text-lg dark:text-white/70">
                 Improve Your Business Performance with
-                <span className="-mt-2 block text-2xl font-bold text-main sm:text-3xl">
+                <span className="-mt-2 block text-2xl font-bold text-main sm:text-3xl dark:text-white">
                   Dewan Consulting!
                 </span>
               </p>
 
               {/* Description */}
-              <p className="text-sm font-medium leading-7 text-main/55 sm:text-base">
+              <p className="text-sm font-medium leading-7 text-main/55 sm:text-base dark:text-white/55">
                 Our company is formed of a group of talented software engineers,
                 programmers, and business consultants who are fully capable of
                 translating business needs into actual solutions and making our
@@ -99,9 +99,9 @@ export default function AboutUs() {
                 ].map((item) => (
                   <div
                     key={item}
-                    className="flex items-center gap-2 text-sm font-semibold text-main/70"
+                    className="flex items-center gap-2 text-sm font-semibold text-main/70 dark:text-white/70"
                   >
-                    <CheckCircle2 size={17} className="shrink-0 text-main" />
+                    <CheckCircle2 size={17} className="shrink-0 text-main dark:text-accent-brand" />
 
                     <span>{item}</span>
                   </div>
@@ -176,14 +176,14 @@ export default function AboutUs() {
               className={cn(
                 "absolute -bottom-6 right-5 rounded-xl",
                 "border border-white/60 bg-white px-5 py-3",
-                "shadow-xl shadow-black/10",
+                "shadow-xl shadow-black/10 dark:border-white/10 dark:bg-[#1e1e1e]",
               )}
             >
-              <p className="text-xs font-medium text-main/50">
+              <p className="text-xs font-medium text-main/50 dark:text-white/50">
                 Technology & Consulting
               </p>
 
-              <p className="text-sm font-bold text-main">Business Solutions</p>
+              <p className="text-sm font-bold text-main dark:text-white">Business Solutions</p>
             </div>
           </div>
         </div>

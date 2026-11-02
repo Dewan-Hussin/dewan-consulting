@@ -27,7 +27,7 @@ const principles = [
 
 export default function PrinciplesSection() {
   return (
-    <section className="relative bg-white text-navy-950">
+    <section className="relative bg-white text-navy-950 dark:bg-background dark:text-white">
       <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 md:py-28 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
           {/* sticky heading */}
@@ -43,7 +43,7 @@ export default function PrinciplesSection() {
                 </h2>
               </Reveal>
               <Reveal delay={160}>
-                <p className="mt-6 max-w-sm text-pretty leading-relaxed text-navy-950/60">
+                <p className="mt-6 max-w-sm text-pretty leading-relaxed text-navy-950/60 dark:text-white/55">
                   Written down after the project that taught us everything.
                   They appear in every proposal, and we hold them up when a
                   deadline gets uncomfortable.
@@ -54,7 +54,7 @@ export default function PrinciplesSection() {
 
           {/* numbered list */}
           <div className="lg:col-span-8">
-            <ol className="divide-y divide-navy-950/10 border-y border-navy-950/10">
+            <ol className="divide-y divide-navy-950/10 border-y border-navy-950/10 dark:divide-white/10 dark:border-white/10">
               {principles.map((item, i) => (
                 <li key={item.index}>
                   <Reveal delay={i * 80}>
@@ -66,7 +66,7 @@ export default function PrinciplesSection() {
                         <h3 className="text-xl font-bold tracking-tight sm:text-2xl">
                           {item.title}
                         </h3>
-                        <p className="mt-3 max-w-xl text-pretty leading-relaxed text-navy-950/60">
+                        <p className="mt-3 max-w-xl text-pretty leading-relaxed text-navy-950/60 dark:text-white/55">
                           {item.body}
                         </p>
                       </div>

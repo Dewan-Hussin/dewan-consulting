@@ -4,7 +4,7 @@ import { SectionEyebrow } from "../../../../components/shared/SectionEyebrow";
 
 export default function StorySection() {
   return (
-    <section className="relative overflow-hidden bg-second/50 text-main">
+    <section className="relative overflow-hidden bg-second/50 text-main dark:bg-background dark:text-white">
       <div className="mx-auto max-w-7xl px-4 py-20 pb-28 sm:px-6 md:py-28 lg:px-8">
         <div className="grid items-start gap-16 lg:grid-cols-12 lg:gap-12">
           {/* copy */}
@@ -19,14 +19,14 @@ export default function StorySection() {
               </h2>
             </Reveal>
             <Reveal delay={140}>
-              <div className="mt-8 space-y-5 text-pretty text-base leading-relaxed text-main/70 sm:text-lg">
+              <div className="mt-8 space-y-5 text-pretty text-base leading-relaxed text-main/70 sm:text-lg dark:text-white/60">
                 <p>
                   Dewan Consulting started in 2000 with one payroll project
                   that everyone else had quietly stopped answering. We finished
                   it on time, then kept improving it long after the contract
                   ended — because payroll does not forgive.
                 </p>
-                <p className="text-main">
+                <p className="text-main dark:text-white">
                   That habit became the company. Today we design, implement and
                   audit the systems companies run on every working day:
                   FreightAccount for shipping and logistics, time & attendance,
@@ -56,7 +56,7 @@ export default function StorySection() {
                   />
                 </div>
 
-                <figure className="absolute -bottom-14 inset-s-6 w-36 rotate-[-4deg] rounded-lg bg-main p-2 pb-4 shadow-xl shadow-main/50">
+                <figure className="absolute -bottom-14 inset-s-6 w-36 rotate-[-4deg] rounded-lg bg-main p-2 pb-4 shadow-xl shadow-main/50 dark:bg-[#1e1e1e]">
                   <div className="overflow-hidden rounded">
                     <Image
                       src="/images/about-us/aboutus.jpg"
@@ -71,7 +71,7 @@ export default function StorySection() {
                   </figcaption>
                 </figure>
 
-                <blockquote className="absolute -top-8 inset-e-0 max-w-[16rem] -rotate-2 rounded-lg bg-second p-5 text-main shadow-xl shadow-main ">
+                <blockquote className="absolute -top-8 inset-e-0 max-w-[16rem] -rotate-2 rounded-lg bg-second p-5 text-main shadow-xl shadow-main dark:bg-[#1e1e1e] dark:text-white dark:shadow-black/40">
                   <p className="text-sm font-medium leading-relaxed">
                     “Any system that has to run on Monday at 8:02 is a Monday
                     system. We build those.”

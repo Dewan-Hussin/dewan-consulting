@@ -9,7 +9,7 @@ function ImplementationProjectAudit() {
   return (
     <section className="container mx-auto mt-10 px-4 sm:mt-12 sm:px-6 lg:px-8">
       <Reveal>
-        <div className="relative mx-auto w-[95%] overflow-hidden rounded-2xl border border-main/10 bg-white shadow-sm">
+        <div className="relative mx-auto w-[95%] overflow-hidden rounded-2xl border border-main/10 bg-white shadow-sm dark:border-white/10 dark:bg-[#1e1e1e]">
           {/* Decorative element */}
           <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-second/70 blur-3xl" />
 
@@ -26,19 +26,19 @@ function ImplementationProjectAudit() {
                 </span>
               </div>
 
-              <h2 className="mt-5 text-3xl font-semibold leading-tight tracking-tight text-main sm:text-4xl">
+              <h2 className="mt-5 text-3xl font-semibold leading-tight tracking-tight text-main sm:text-4xl dark:text-white">
                 Implementation
-                <span className="block text-main/55">Project Audit</span>
+                <span className="block text-main/55 dark:text-white/55">Project Audit</span>
               </h2>
 
-              <p className="mt-5 text-base leading-7 text-main/70">
+              <p className="mt-5 text-base leading-7 text-main/70 dark:text-white/65">
                 Choosing a new system can be challenging with so many solutions
                 and options available. Our Implementation Project Audit service
                 provides the professional consulting you need to identify the
                 system that best fits your company's requirements.
               </p>
 
-              <p className="mt-3 text-sm leading-6 text-main/60">
+              <p className="mt-3 text-sm leading-6 text-main/60 dark:text-white/55">
                 If you have already purchased a system, we can also monitor its
                 implementation from start to finish. We follow tasks,
                 milestones, and deadlines while evaluating implementation
@@ -135,7 +135,7 @@ function ImplementationProjectAudit() {
 
       {/* Audit Areas */}
       <div className="mt-16 sm:mt-20">
-        <div className="border-b border-main/10 pb-6">
+        <div className="border-b border-main/10 pb-6 dark:border-white/10">
           <Reveal>
             <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
               <div>
@@ -143,12 +143,12 @@ function ImplementationProjectAudit() {
                   What We Provide
                 </span>
 
-                <h2 className="mt-2 text-3xl font-semibold tracking-tight text-main sm:text-4xl">
+                <h2 className="mt-2 text-3xl font-semibold tracking-tight text-main sm:text-4xl dark:text-white">
                   Complete implementation oversight
                 </h2>
               </div>
 
-              <p className="max-w-md text-sm leading-6 text-main/60 sm:text-right">
+              <p className="max-w-md text-sm leading-6 text-main/60 sm:text-right dark:text-white/55">
                 Professional oversight designed to give you clarity,
                 accountability, and confidence throughout the system lifecycle.
               </p>
@@ -162,16 +162,16 @@ function ImplementationProjectAudit() {
 
             return (
               <Reveal key={area.title} delay={index * 70}>
-                <article className="group h-full rounded-xl border border-main/10 bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:border-main/20 hover:shadow-lg hover:shadow-main/5">
+                <article className="group h-full rounded-xl border border-main/10 bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:border-main/20 hover:shadow-lg hover:shadow-main/5 dark:border-white/10 dark:bg-white/5 dark:hover:border-white/20">
                   <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-second text-main transition-colors duration-300 group-hover:bg-main group-hover:text-white">
                     <Icon size={20} strokeWidth={1.7} />
                   </span>
 
-                  <h3 className="mt-5 text-base font-semibold text-main">
+                  <h3 className="mt-5 text-base font-semibold text-main dark:text-white">
                     {area.title}
                   </h3>
 
-                  <p className="mt-2 text-sm leading-6 text-main/60">
+                  <p className="mt-2 text-sm leading-6 text-main/60 dark:text-white/55">
                     {area.description}
                   </p>
                 </article>
