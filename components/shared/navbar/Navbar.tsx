@@ -5,7 +5,7 @@ import { Link, usePathname } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 import { ChevronDown, ChevronRight, Menu, X } from "lucide-react";
 import Image from "next/image";
-import { useState } from "react";
+import { useReducer, useState } from "react";
 
 const navLinks = [
   {
@@ -15,6 +15,12 @@ const navLinks = [
   {
     href: "/about-us",
     label: "About Us",
+    children: [
+      {
+        href: "/about-us/who-we-are",
+        label: "Who We Are",
+      },
+    ],
   },
   {
     href: "/services",
@@ -44,9 +50,45 @@ const navLinks = [
   },
 ];
 
+// Start —— useReducer()
+// 1.reducer function
+function reducer(state: any, action: { type: string; label: string }) {
+  switch (action.type) {
+    case "mouseEnter":
+      return { ...state, [action.label]: true };
+    case "mouseLeave":
+      return { ...state, [action.label]: false };
+    default:
+      throw new Error();
+  }
+}
+
+// 2.initial state
+
+function objOfLabels() {
+  const objLabels = {};
+  navLinks
+    .filter((navLink) => {
+      return navLink.children;
+    })
+    .forEach((filteredLabel) => {
+      Object.assign(objLabels, {
+        [filteredLabel.label]: false,
+      });
+    });
+
+  return objLabels;
+}
+
+const initialState = objOfLabels();
+
+// End —— useReducer()
+
 export default function Navbar() {
   const [isMenu, setIsMenu] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+
+  const [state, dispatch] = useReducer(reducer, initialState);
 
   const pathname = usePathname();
 
@@ -94,8 +136,12 @@ export default function Navbar() {
                       <div
                         key={link.href}
                         className="relative"
-                        onMouseEnter={() => setIsServicesOpen(true)}
-                        onMouseLeave={() => setIsServicesOpen(false)}
+                        onMouseEnter={() =>
+                          dispatch({ type: "mouseEnter", label: link.label })
+                        }
+                        onMouseLeave={() =>
+                          dispatch({ type: "mouseLeave", label: link.label })
+                        }
                       >
                         <Button
                           variant="ghost"
@@ -113,7 +159,7 @@ export default function Navbar() {
                           <ChevronDown
                             className={cn(
                               "h-3.5 w-3.5 transition-transform duration-200",
-                              isServicesOpen && "rotate-180",
+                              state[link.label] && "rotate-180",
                             )}
                           />
 
@@ -127,7 +173,7 @@ export default function Navbar() {
                           className={cn(
                             "absolute left-1/2 top-full w-64 -translate-x-1/2 pt-3",
                             "transition-all duration-200",
-                            isServicesOpen
+                            state[link.label]
                               ? "visible translate-y-0 opacity-100"
                               : "invisible -translate-y-2 opacity-0 pointer-events-none",
                           )}
