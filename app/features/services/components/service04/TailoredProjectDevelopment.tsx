@@ -27,8 +27,6 @@ function TailoredProjectDevelopment() {
       {/* Main Service Introduction */}
       <Reveal>
         <div className="relative overflow-hidden rounded-2xl border border-main/10 bg-white shadow-sm dark:border-white/10 dark:bg-[#1e1e1e]">
-          <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-second/70 blur-3xl" />
-
           <div className="relative grid lg:grid-cols-[1fr_0.8fr]">
             {/* Introduction */}
             <div className="p-5 sm:p-8 lg:p-10">
@@ -71,10 +69,7 @@ function TailoredProjectDevelopment() {
 
                 <div className="mt-4 grid gap-3 sm:grid-cols-2">
                   {projectFeatures.map((feature) => (
-                    <div
-                      key={feature}
-                      className="flex items-start gap-2.5"
-                    >
+                    <div key={feature} className="flex items-start gap-2.5">
                       <CheckCircle2
                         size={17}
                         strokeWidth={1.8}
@@ -206,10 +201,7 @@ function TailoredProjectDevelopment() {
 
                 <div className="mt-4 grid gap-x-5 gap-y-3 sm:grid-cols-2">
                   {squashFeatures.map((feature) => (
-                    <div
-                      key={feature}
-                      className="flex items-start gap-2.5"
-                    >
+                    <div key={feature} className="flex items-start gap-2.5">
                       <CheckCircle2
                         size={16}
                         className="mt-0.5 shrink-0 text-main/50"
@@ -291,10 +283,7 @@ function TailoredProjectDevelopment() {
 
                 <div className="mt-4 space-y-3">
                   {invoicingFeatures.map((feature) => (
-                    <div
-                      key={feature}
-                      className="flex items-start gap-2.5"
-                    >
+                    <div key={feature} className="flex items-start gap-2.5">
                       <CheckCircle2
                         size={16}
                         className="mt-0.5 shrink-0 text-main/50"

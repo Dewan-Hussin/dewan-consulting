@@ -10,9 +10,6 @@ function ImplementationProjectAudit() {
     <section className="container mx-auto mt-10 px-4 sm:mt-12 sm:px-6 lg:px-8">
       <Reveal>
         <div className="relative mx-auto w-[95%] overflow-hidden rounded-2xl border border-main/10 bg-white shadow-sm dark:border-white/10 dark:bg-[#1e1e1e]">
-          {/* Decorative element */}
-          <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-second/70 blur-3xl" />
-
           <div className="relative grid lg:grid-cols-[1.05fr_0.95fr]">
             {/* LEFT — Introduction */}
             <div className="p-5 sm:p-8 lg:p-10">
@@ -28,7 +25,9 @@ function ImplementationProjectAudit() {
 
               <h2 className="mt-5 text-3xl font-semibold leading-tight tracking-tight text-main sm:text-4xl dark:text-white">
                 Implementation
-                <span className="block text-main/55 dark:text-white/55">Project Audit</span>
+                <span className="block text-main/55 dark:text-white/55">
+                  Project Audit
+                </span>
               </h2>
 
               <p className="mt-5 text-base leading-7 text-main/70 dark:text-white/65">
