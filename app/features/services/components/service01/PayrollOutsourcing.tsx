@@ -1,18 +1,12 @@
 "use client";
 
-import {
-  ArrowUpRight,
-  Banknote,
-  LockKeyhole,
-  ShieldCheck,
-} from "lucide-react";
+import { ArrowUpRight, Banknote, LockKeyhole, ShieldCheck } from "lucide-react";
 import { memo } from "react";
 import Reveal from "@/components/shared/Reveal";
 import { payrollOutsourcingService } from "../../data/service01";
 
 function PayrollOutsourcing() {
-  const { payrollReports, benefits, payrollSteps } =
-    payrollOutsourcingService;
+  const { payrollReports, benefits, payrollSteps } = payrollOutsourcingService;
 
   return (
     <>
@@ -28,7 +22,7 @@ function PayrollOutsourcing() {
                     <Banknote size={21} strokeWidth={1.7} />
                   </span>
 
-                  <span className="text-xs font-semibold uppercase tracking-[0.2em] text-main/50">
+                  <span className="text-xs font-semibold uppercase tracking-[0.2em] text-main/50 dark:text-white/50">
                     Service 001
                   </span>
                 </div>
@@ -55,10 +49,10 @@ function PayrollOutsourcing() {
                 <div className="space-y-3 border-t border-main/10 pt-5 dark:border-white/10">
                   {benefits.map((benefit) => (
                     <div key={benefit} className="flex items-start gap-3">
-                      <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-main/10">
+                      <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-main/10 dark:bg-white/10">
                         <ShieldCheck
                           size={13}
-                          className="text-main"
+                          className="text-main dark:text-white"
                           strokeWidth={2}
                         />
                       </span>
@@ -120,10 +114,10 @@ function PayrollOutsourcing() {
                 <div className="mt-6 flex items-start gap-3 rounded-lg border border-main/10 bg-white p-4 dark:border-white/10 dark:bg-white/5">
                   <LockKeyhole
                     size={18}
-                    className="mt-0.5 shrink-0 text-main/70"
+                    className="mt-0.5 shrink-0 text-main/70 dark:text-white/70"
                   />
 
-                  <p className="text-xs leading-5.5 text-main/60">
+                  <p className="text-xs leading-5.5 text-main/60 dark:text-white/60 ">
                     Employee information is handled with a focus on
                     confidentiality throughout the payroll process.
                   </p>
@@ -154,7 +148,7 @@ function PayrollOutsourcing() {
               <Reveal key={report.number} delay={(index % 3) * 70}>
                 <article className="group flex h-full min-h-48 flex-col rounded-xl border border-main/10 bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:border-main/25 hover:shadow-lg hover:shadow-main/5 sm:p-6 dark:border-white/10 dark:bg-white/5 dark:hover:border-white/20">
                   <div className="flex items-center justify-between">
-                    <span className="text-xs font-semibold tracking-[0.15em] text-main/35">
+                    <span className="text-xs font-semibold tracking-[0.15em] text-main/35 dark:text-white">
                       {report.number}
                     </span>
 
@@ -174,7 +168,7 @@ function PayrollOutsourcing() {
                   <div className="mt-auto flex justify-end pt-4">
                     <ArrowUpRight
                       size={18}
-                      className="text-main/30 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-main"
+                      className="text-main/30 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-main dark:text-white/30 dark:group-hover:text-white"
                     />
                   </div>
                 </article>
