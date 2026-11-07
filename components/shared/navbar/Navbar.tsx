@@ -66,6 +66,8 @@ function reducer(state: any, action: { type: string; label: string }) {
       return { ...state, [action.label]: true };
     case "mouseLeave":
       return { ...state, [action.label]: false };
+    case "click":
+      return { ...state, [action.label]: !state[action.label] };
     default:
       throw new Error();
   }
@@ -85,6 +87,8 @@ function objOfLabels() {
       });
     });
 
+  console.log(objLabels);
+
   return objLabels;
 }
 
@@ -94,8 +98,6 @@ const initialState = objOfLabels();
 
 export default function Navbar() {
   const [isMenu, setIsMenu] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const pathname = usePathname();
@@ -104,8 +106,6 @@ export default function Navbar() {
     if (href === "/") return pathname === "/";
     return pathname.startsWith(href);
   };
-
-  const servicesActive = isActive("/services");
 
   return (
     <header className="fixed top-0 left-0 z-50 w-full">
@@ -140,6 +140,7 @@ export default function Navbar() {
               <div className="flex items-center gap-1 rounded-2xl bg-white/4 p-1 ring-1 ring-white/6">
                 {navLinks.map((link) => {
                   if (link.children) {
+                    const mainActive = isActive(link.href);
                     return (
                       <div
                         key={link.href}
@@ -153,13 +154,15 @@ export default function Navbar() {
                       >
                         <Button
                           variant="ghost"
-                          onClick={() => setIsServicesOpen((prev) => !prev)}
+                          onClick={() =>
+                            dispatch({ type: "click", label: link.label })
+                          }
                           className={cn(
                             "relative h-10 gap-1.5 rounded-xl px-4",
                             "text-sm font-medium text-white/75",
                             "hover:bg-white/[0.07] hover:text-white",
                             "transition-all duration-200",
-                            servicesActive && "bg-white/9 text-white",
+                            mainActive && "bg-white/9 text-white",
                           )}
                         >
                           {link.label}
@@ -171,7 +174,7 @@ export default function Navbar() {
                             )}
                           />
 
-                          {servicesActive && (
+                          {mainActive && (
                             <span className="absolute bottom-0 left-1/2 h-0.5 w-5 -translate-x-1/2 rounded-full bg-second" />
                           )}
                         </Button>
@@ -197,7 +200,9 @@ export default function Navbar() {
                               <Link
                                 key={child.href}
                                 href={child.href}
-                                onClick={() => setIsServicesOpen(false)}
+                                onClick={() =>
+                                  dispatch({ type: "click", label: link.label })
+                                }
                                 className={cn(
                                   "group/item flex items-center justify-between rounded-lg px-3 py-3",
                                   "text-sm font-medium",
@@ -287,16 +292,19 @@ export default function Navbar() {
               <div className="flex flex-col gap-1">
                 {navLinks.map((link) => {
                   if (link.children) {
+                    const mainActive = isActive(link.href);
                     return (
                       <div key={link.href}>
                         <button
                           type="button"
-                          onClick={() => setIsServicesOpen((prev) => !prev)}
+                          onClick={() =>
+                            dispatch({ type: "click", label: link.label })
+                          }
                           className={cn(
-                            "flex w-full items-center justify-between rounded-xl px-4 py-3",
+                            "flex w-full items-center justify-start gap-1 rounded-xl px-4 py-3",
                             "text-sm font-medium",
                             "transition-colors duration-200",
-                            servicesActive
+                            mainActive
                               ? "bg-white/10 text-white"
                               : "text-white/75 hover:bg-white/5 hover:text-white",
                           )}
@@ -306,7 +314,7 @@ export default function Navbar() {
                           <ChevronDown
                             className={cn(
                               "h-4 w-4 transition-transform duration-200",
-                              isServicesOpen && "rotate-180",
+                              state[link.label] && "rotate-180",
                             )}
                           />
                         </button>
@@ -315,7 +323,7 @@ export default function Navbar() {
                           className={cn(
                             "overflow-hidden pl-3",
                             "transition-all duration-200",
-                            isServicesOpen
+                            state[link.label]
                               ? "max-h-40 opacity-100"
                               : "max-h-0 opacity-0",
                           )}
@@ -326,8 +334,11 @@ export default function Navbar() {
                                 key={child.href}
                                 href={child.href}
                                 onClick={() => {
+                                  dispatch({
+                                    type: "click",
+                                    label: link.label,
+                                  });
                                   setIsMenu(false);
-                                  setIsServicesOpen(false);
                                 }}
                                 className={cn(
                                   "block rounded-lg px-3 py-2.5 text-sm",
