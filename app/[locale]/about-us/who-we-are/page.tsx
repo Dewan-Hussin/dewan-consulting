@@ -12,12 +12,9 @@ export default function WhoWeArePage() {
     <>
       <WhoWeAre />
       <Ticker />
-      {/* <StorySection />
-      
-      <StatsBand /> */}
 
+      
       {/* 
-      <PrinciplesSection />
       <TimelineSection />
       <TeamSection />
       <CtaSection /> */}

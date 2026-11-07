@@ -27,19 +27,19 @@ const principles = [
 
 export default function PrinciplesSection() {
   return (
-    <section className="relative bg-white text-navy-950 dark:bg-background dark:text-white">
+    <section className="relative bg-second text-main dark:bg-background dark:text-white">
       <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 md:py-28 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
           {/* sticky heading */}
           <div className="lg:col-span-4">
             <div className="lg:sticky lg:top-24">
               <Reveal>
-                <SectionEyebrow index="004" label="What we operate by" />
+                <SectionEyebrow index="003" label="What we operate by" />
               </Reveal>
               <Reveal delay={80}>
                 <h2 className="mt-6 text-balance text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
                   Four rules we{" "}
-                  <span className="text-brand">never bend.</span>
+                  <span className="text-main">never bend.</span>
                 </h2>
               </Reveal>
               <Reveal delay={160}>

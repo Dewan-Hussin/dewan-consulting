@@ -24,6 +24,10 @@ const navLinks = [
         href: "/about-us/our-story",
         label: "Our Story",
       },
+      {
+        href: "/about-us/our-rules",
+        label: "Our Rules",
+      },
     ],
   },
   {
