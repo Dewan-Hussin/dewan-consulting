@@ -100,7 +100,7 @@ export default function StatsBand() {
       <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 md:py-24 lg:px-8">
         <div className="mb-10 flex flex-wrap items-end justify-between gap-6 ">
           <SectionEyebrow
-            index="003"
+            index=""
             label="By the numbers"
             className="text-white/80"
           />

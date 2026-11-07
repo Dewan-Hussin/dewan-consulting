@@ -20,6 +20,10 @@ const navLinks = [
         href: "/about-us/who-we-are",
         label: "Who We Are",
       },
+      {
+        href: "/about-us/our-story",
+        label: "Our Story",
+      },
     ],
   },
   {

@@ -1,4 +1,4 @@
-import AboutHero from "@/app/features/about/components/AboutHero";
+import WhoWeAre from "@/app/features/about/components/WhoWeAre";
 import CtaSection from "@/app/features/about/components/CtaSection";
 import PrinciplesSection from "@/app/features/about/components/PrinciplesSection";
 import StatsBand from "@/app/features/about/components/StatsBand";
@@ -7,19 +7,20 @@ import TeamSection from "@/app/features/about/components/TeamSection";
 import Ticker from "@/app/features/about/components/Ticker";
 import TimelineSection from "@/app/features/about/components/TimelineSection";
 
-export default function CompanyPage() {
+export default function WhoWeArePage() {
   return (
-    <main>
-      <AboutHero />
+    <>
+      <WhoWeAre />
       <Ticker />
-      <StorySection />
+      {/* <StorySection />
       
-      <StatsBand />
+      <StatsBand /> */}
+
       {/* 
       <PrinciplesSection />
       <TimelineSection />
       <TeamSection />
       <CtaSection /> */}
-    </main>
+    </>
   );
 }

@@ -3,7 +3,7 @@ import { ArrowDown, ArrowUpRight } from "lucide-react";
 import Reveal from "../../../../components/shared/Reveal";
 import { SectionEyebrow } from "../../../../components/shared/SectionEyebrow";
 
-export default function AboutHero() {
+export default function WhoWeAre() {
   return (
     <section className="relative min-h-svh w-full overflow-hidden bg-second/50 text-main/50 py-20 dark:bg-background dark:text-white/50">
       <div className="relative mx-auto flex min-h-svh max-w-7xl flex-col px-4 pb-10 sm:px-6 lg:px-8">
@@ -73,7 +73,7 @@ export default function AboutHero() {
           </Reveal>
         </div>
 
-        <Reveal delay={400}>
+        {/* <Reveal delay={400}>
           <div className="flex items-center justify-between border-t border-main/30 pt-4 text-[0.7rem] uppercase tracking-[0.25em] text-main/60">
             <span>№ 001 — About</span>
             <span className="flex items-center gap-2">
@@ -84,7 +84,7 @@ export default function AboutHero() {
               />
             </span>
           </div>
-        </Reveal>
+        </Reveal> */}
       </div>
     </section>
   );
