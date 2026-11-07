@@ -21,7 +21,7 @@ function ProjectManagement() {
                   <NotebookPen size={21} strokeWidth={1.7} />
                 </span>
 
-                <span className="text-xs font-semibold uppercase tracking-[0.2em] text-main/50">
+                <span className="text-xs font-semibold uppercase tracking-[0.2em] text-main/50 dark:text-white/50">
                   Service 002
                 </span>
               </div>
@@ -52,7 +52,7 @@ function ProjectManagement() {
                     What we manage
                   </h3>
 
-                  <span className="text-xs font-medium tracking-wider text-main/35">
+                  <span className="text-xs font-medium tracking-wider text-main/35 dark:text-white/35">
                     06 AREAS
                   </span>
                 </div>
@@ -66,7 +66,7 @@ function ProjectManagement() {
                       <ShieldCheck
                         size={16}
                         strokeWidth={1.8}
-                        className="mt-0.5 shrink-0 text-main/50"
+                        className="mt-0.5 shrink-0 text-main/50 dark:text-white/35"
                       />
 
                       <span>{area}</span>
@@ -129,11 +129,11 @@ function ProjectManagement() {
 
               {/* Result */}
               <div className="mt-7 rounded-xl border border-main/10 bg-white p-4 dark:border-white/10 dark:bg-white/5">
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-main/40">
+                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-main/40 dark:text-white/40">
                   The Result
                 </p>
 
-                <p className="mt-1.5 text-sm leading-5.5 text-main/65">
+                <p className="mt-1.5 text-sm leading-5.5 text-main/65 dark:text-white/65">
                   A controlled implementation process with clear milestones,
                   coordinated training, and a smoother path to successful
                   project delivery.
