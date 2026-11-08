@@ -15,7 +15,7 @@ export function SectionEyebrow({
     <p
       className={cn(
         "flex items-center gap-3 text-[0.7rem] font-semibold uppercase tracking-[0.22em]",
-        "text-slate-600 dark:text-white/60",
+        "text-main/60 dark:text-white/60",
         className,
       )}
     >

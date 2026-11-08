@@ -43,7 +43,7 @@ export default function PrinciplesSection() {
                 </h2>
               </Reveal>
               <Reveal delay={160}>
-                <p className="mt-6 max-w-sm text-pretty leading-relaxed text-navy-950/60 dark:text-white/55">
+                <p className="mt-6 max-w-sm text-pretty leading-relaxed text-main/60 dark:text-white/60">
                   Written down after the project that taught us everything.
                   They appear in every proposal, and we hold them up when a
                   deadline gets uncomfortable.
@@ -54,25 +54,25 @@ export default function PrinciplesSection() {
 
           {/* numbered list */}
           <div className="lg:col-span-8">
-            <ol className="divide-y divide-navy-950/10 border-y border-navy-950/10 dark:divide-white/10 dark:border-white/10">
+            <ol className="divide-y divide-main/10 border-y border-main/10 dark:divide-white/10 dark:border-white/10">
               {principles.map((item, i) => (
                 <li key={item.index}>
                   <Reveal delay={i * 80}>
                     <div className="group flex gap-6 py-8 transition-colors sm:gap-10 sm:py-10">
-                      <span className="pt-1 text-sm font-bold tabular-nums tracking-widest text-brand/70">
+                      <span className="pt-1 text-sm font-bold tabular-nums tracking-widest text-main/70">
                         {item.index}
                       </span>
                       <div className="flex-1">
                         <h3 className="text-xl font-bold tracking-tight sm:text-2xl">
                           {item.title}
                         </h3>
-                        <p className="mt-3 max-w-xl text-pretty leading-relaxed text-navy-950/60 dark:text-white/55">
+                        <p className="mt-3 max-w-xl text-pretty leading-relaxed text-main/60 dark:text-white/55">
                           {item.body}
                         </p>
                       </div>
                       <ArrowUpRight
                         aria-hidden
-                        className="mt-1 size-5 shrink-0 self-start text-brand/40 transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-brand rtl:-scale-x-100 rtl:group-hover:translate-x-0 rtl:group-hover:-translate-x-1"
+                        className="mt-1 size-5 shrink-0 self-start text-main/40 transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-main rtl:-scale-x-100 rtl:group-hover:translate-x-0"
                       />
                     </div>
                   </Reveal>
