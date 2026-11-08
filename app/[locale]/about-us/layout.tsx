@@ -3,9 +3,5 @@ interface Props {
 }
 
 export default function AboutUsLayout({ children }: Props) {
-  return (
-    <main className="">
-      {children}
-    </main>
-  );
+  return <>{children}</>;
 }

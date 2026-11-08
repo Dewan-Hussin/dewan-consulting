@@ -9,7 +9,7 @@ import TimelineSection from "@/app/features/about/components/TimelineSection";
 
 export default function WhoWeArePage() {
   return (
-    <>
+    <main>
       <WhoWeAre />
       <Ticker />
 
@@ -18,6 +18,6 @@ export default function WhoWeArePage() {
       <TimelineSection />
       <TeamSection />
       <CtaSection /> */}
-    </>
+    </main>
   );
 }

@@ -8,7 +8,7 @@ export default function WhoWeAre() {
   return (
     <section className="relative min-h-svh w-full overflow-hidden bg-second/50 text-main/50 py-20 dark:bg-background dark:text-white/50">
       <div className="relative mx-auto flex min-h-svh max-w-7xl flex-col px-4 pb-10 sm:px-6 lg:px-8">
-        <div className="flex flex-1 flex-col justify-center gap-7 ">
+        <div className="flex flex-1 flex-col justify-center gap-7">
           <Reveal>
             <SectionEyebrow index="001" label="Who we are" />
           </Reveal>
