@@ -3,6 +3,7 @@ import HeroSection from "@/app/features/home/components/HeroSection";
 import { getTranslations } from "next-intl/server";
 import AboutUs from "@/app/features/home/components/AboutUs";
 import ServicesSection from "@/app/features/home/components/ServicesSection";
+import ContactUs from "@/app/features/home/components/ContactUs";
 
 export default async function HomePage() {
   // const t = await getTranslations("HomePage");
@@ -14,6 +15,7 @@ export default async function HomePage() {
         <OurCompany />
         <AboutUs />
         <ServicesSection />
+        <ContactUs />
       </main>
     </>
   );
