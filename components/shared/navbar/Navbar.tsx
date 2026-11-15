@@ -57,6 +57,10 @@ const navLinks = [
     ],
   },
   {
+    href: "/our-products",
+    label: "Products",
+  },
+  {
     href: "/contact-us",
     label: "Contact Us",
   },

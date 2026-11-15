@@ -63,7 +63,7 @@ const ourTeamMembers: TeamMember[] = [
     subTitle: "Eng.",
     firstName: "Hussien",
     lastName: "Khaled",
-    description: "Backend ",
+    description: "Backend Developer",
     contactDetails: {
       phone: "0123456789",
       email: "hussien@dewan-eg.com",
@@ -75,7 +75,7 @@ const ourTeamMembers: TeamMember[] = [
     subTitle: "Eng.",
     firstName: "Yehia",
     lastName: "Zakaria",
-    description: "نقاش",
+    description: "Frontend Developer",
     contactDetails: {
       phone: "01206962954",
       email: "yehia@dewan-eg.com",

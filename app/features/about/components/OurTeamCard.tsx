@@ -1,15 +1,10 @@
-
 "use client";
 
 import { useEffect, useRef } from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import {
-  Mail,
-  Phone,
-  ArrowUpRight,
-  BriefcaseBusiness,
-} from "lucide-react";
+import { Mail, Phone, ArrowUpRight, BriefcaseBusiness } from "lucide-react";
 import testImg from "@/public/images/about-us/ourTeam/boss.webp";
+import { cn } from "@/lib/utils";
 
 export interface TeamMember {
   id: number;
@@ -30,10 +25,7 @@ interface OurTeamCardProps {
   featured?: boolean;
 }
 
-const OurTeamCard = ({
-  member,
-  featured = false,
-}: OurTeamCardProps) => {
+const OurTeamCard = ({ member, featured = false }: OurTeamCardProps) => {
   const cardRef = useRef<HTMLDivElement>(null);
   const frameRef = useRef<number | null>(null);
 
@@ -111,7 +103,7 @@ const OurTeamCard = ({
         hover:shadow-xl hover:shadow-slate-900/10
         motion-reduce:transition-none
         h-full
-        ${featured ? "max-w-2xl" : "max-w-full"}
+        ${featured ? "max-w-md py-3" : "max-w-full"}
       `}
     >
       <div className="absolute inset-y-0 left-0 w-1 bg-main" />
@@ -120,7 +112,8 @@ const OurTeamCard = ({
         className={`
           flex items-center gap-4 p-4 pl-5
           sm:gap-6 sm:p-5 sm:pl-6
-          ${featured ? "sm:gap-8 sm:p-6 sm:pl-7" : ""}
+          ${featured ? "sm:gap-8 sm:p-6 sm:pl-7 flex-col text-center" : ""}
+
         `}
       >
         {/* Member Image */}
@@ -128,9 +121,7 @@ const OurTeamCard = ({
           className={`
             relative shrink-0 overflow-hidden rounded-xl
             bg-slate-100
-            ${featured
-              ? "size-28 sm:size-40"
-              : "size-24 sm:size-28"}
+            ${featured ? "w-full h-80" : "size-24 sm:size-28"}
           `}
         >
           <img
@@ -148,7 +139,12 @@ const OurTeamCard = ({
         {/* Member Information */}
         <div className="min-w-0 flex-1">
           {/* Role */}
-          <div className="mb-2 flex flex-wrap items-center gap-2">
+          <div
+            className={cn(
+              "mb-2 flex flex-wrap items-center gap-2",
+              featured ? "justify-center" : "",
+            )}
+          >
             <span className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-main">
               <BriefcaseBusiness size={14} />
               {member.title}
@@ -165,9 +161,7 @@ const OurTeamCard = ({
           <h3
             className={`
               font-bold tracking-tight text-slate-900
-              ${featured
-                ? "text-lg sm:text-2xl"
-                : "text-base sm:text-lg"}
+              ${featured ? "text-lg sm:text-2xl" : "text-base sm:text-lg"}
             `}
           >
             {fullName}
@@ -182,7 +176,12 @@ const OurTeamCard = ({
 
           {/* Contact Details */}
           {(phone || email) && (
-            <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-slate-100 pt-3">
+            <div
+              className={cn(
+                "mt-3 flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-slate-100 pt-3",
+                featured ? "justify-center" : "",
+              )}
+            >
               {phone && (
                 <a
                   href={`tel:${phone}`}
