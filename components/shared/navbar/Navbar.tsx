@@ -94,9 +94,6 @@ function objOfLabels() {
         [filteredLabel.label]: false,
       });
     });
-
-  console.log(objLabels);
-
   return objLabels;
 }
 
