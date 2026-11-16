@@ -224,7 +224,7 @@ export default function PalettePanel() {
                 isDark ? "Switch to light mode" : "Switch to dark mode"
               }
               className={cn(
-                "group flex h-7 w-14 items-center rounded-full p-0.5 transition-colors duration-200",
+                "group cursor-pointer flex h-7 w-14 items-center rounded-full p-0.5 transition-colors duration-200",
                 isDark
                   ? "bg-white/10 hover:bg-white/15"
                   : "bg-gray-100 hover:bg-gray-200",
