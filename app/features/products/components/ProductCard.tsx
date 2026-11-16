@@ -31,6 +31,7 @@ function ProductCard({ product }: Props) {
       {/* Product Image */}
       <CardContent className="relative aspect-video w-full overflow-hidden p-0">
         <Image
+          loading="eager"
           src={product.imgUrl}
           alt={product.title}
           fill
@@ -60,7 +61,10 @@ function ProductCard({ product }: Props) {
             href={`/our-products/${product.id}`}
           >
             Explore Product
-            <ArrowRight className="transform group-hover:translate-x-1 transition-transform duration-300 " size={16} />
+            <ArrowRight
+              className="transform group-hover:translate-x-1 transition-transform duration-300 "
+              size={16}
+            />
           </Link>
         </Button>
 
@@ -75,7 +79,7 @@ function ProductCard({ product }: Props) {
               download
             >
               <Download className="group-hover:animate-bounce" size={16} />
-              Download Pdf
+              Download Doc
             </a>
           </Button>
         )}
