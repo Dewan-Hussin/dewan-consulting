@@ -1,6 +1,6 @@
 "use client";
 import { Product } from "@/app/api/products/productsRoute";
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -24,7 +24,7 @@ function ProductCard({ product }: Props) {
     <Card
       className={cn(
         "group flex h-full flex-col overflow-hidden",
-        "border border-main/10 bg-card p-0 shadow-sm",
+        "border border-main/10 dark:border-white/10 bg-card p-0 shadow-sm",
         "transition-shadow duration-300 hover:shadow-lg",
       )}
     >
@@ -39,12 +39,12 @@ function ProductCard({ product }: Props) {
           className="object-cover transition-transform duration-500 group-hover:scale-110"
         />
 
-        <div className="absolute inset-0 bg-linear-to-t from-black/80 to-transparent opacity-80" />
+        <div className="absolute inset-0 bg-linear-to-t from-black/80 dark:from-black/20 to-transparent opacity-80" />
       </CardContent>
 
       {/* Product Information */}
       <CardHeader className="flex-1 space-y-3 px-5 pt-5">
-        <CardTitle className="line-clamp-1 text-lg font-bold text-main">
+        <CardTitle className="line-clamp-1 text-lg font-bold text-main dark:text-white">
           {product.title}
         </CardTitle>
 
@@ -55,33 +55,36 @@ function ProductCard({ product }: Props) {
 
       {/* Actions */}
       <CardFooter className="flex items-center justify-center gap-3 px-5 pb-5 pt-2">
-        <Button className="bg-main hover:bg-main/80 transition-colors duration-150 gap-2">
-          <Link
-            className="flex items-center justify-center gap-2 w-full"
-            href={`/our-products/${product.id}`}
-          >
-            Explore Product
-            <ArrowRight
-              className="transform group-hover:translate-x-1 transition-transform duration-300 "
-              size={16}
-            />
-          </Link>
-        </Button>
+        {/* <Button className=""> */}
+        <Link
+          className={cn(
+            buttonVariants({}),
+            "flex items-center justify-center gap-2",
+            "bg-main dark:bg-white hover:bg-main/80 dark:hover:bg-white/80  transition-colors duration-150 gap-2",
+          )}
+          href={`/our-products/${product.id}`}
+        >
+          Explore Product
+          <ArrowRight
+            className="transform group-hover:translate-x-1 transition-transform duration-300 "
+            size={16}
+          />
+        </Link>
+        {/* </Button> */}
 
         {product.pdfUrl && (
-          <Button
-            variant="outline"
-            className=" gap-2 border-main/20 text-main hover:bg-main hover:text-white"
+          <a
+            href={product.pdfUrl}
+            className={cn(
+              buttonVariants({ variant: "ghost" }),
+              "flex items-center justify-center gap-2",
+              "gap-2 border-main/20 dark:border-white/20 text-main dark:text-white hover:bg-main dark:hover:bg-white hover:text-white dark:hover:text-main",
+            )}
+            download
           >
-            <a
-              className="flex items-center justify-center gap-2 w-full"
-              href={product.pdfUrl}
-              download
-            >
-              <Download className="group-hover:animate-bounce" size={16} />
-              Download Doc
-            </a>
-          </Button>
+            <Download className="group-hover:animate-bounce" size={16} />
+            Download Doc
+          </a>
         )}
       </CardFooter>
     </Card>

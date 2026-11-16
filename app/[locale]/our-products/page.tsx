@@ -9,7 +9,7 @@ const ProductCard = lazy(
 
 export default function ProductsPage() {
   return (
-    <main className=" mx-auto px-4 py-16 sm:px-6 lg:px-8 bg-second">
+    <main className=" mx-auto px-4 py-16 sm:px-6 lg:px-8 bg-second dark:bg-[#1e1e1e]">
       <div className="container mx-auto">
         {/* Page Header */}
         <header className="mx-auto max-w-2xl space-y-4 py-12 text-center sm:py-16">
@@ -18,7 +18,7 @@ export default function ProductsPage() {
             Our Solutions
           </span> */}
 
-            <h1 className="text-3xl font-bold tracking-tight text-main sm:text-4xl">
+            <h1 className="text-3xl font-bold tracking-tight text-main dark:text-white sm:text-4xl">
               Our Products
             </h1>
 

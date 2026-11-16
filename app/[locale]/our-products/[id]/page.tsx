@@ -48,13 +48,13 @@ export default async function ProductDetailsPage({ params }: Props) {
   );
 
   return (
-    <main className="min-h-screen bg-second">
-      <div className="container mx-auto px-4 py-10 sm:px-6 lg:px-8">
+    <main className="min-h-screen bg-second dark:bg-[#1e1e1e] ">
+      <div className="container mx-auto px-4 py-25 sm:px-6 lg:px-8">
         {/* Breadcrumb */}
         <Reveal>
           <Link
             href="/our-products"
-            className="inline-flex items-center gap-2 text-sm font-medium text-gray-500 transition-colors hover:text-main"
+            className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground transition-colors hover:text-main"
           >
             <ArrowLeft className="size-4" />
             Our Products
@@ -80,17 +80,17 @@ export default async function ProductDetailsPage({ params }: Props) {
           {/* Intro */}
           <div className="flex flex-col justify-center py-2 lg:py-6">
             <Reveal delay={80}>
-              <span className="text-xs font-semibold uppercase tracking-[0.18em] text-main/60">
+              <span className="text-xs font-semibold uppercase tracking-[0.18em] text-main/60 dark:text-white/60">
                 Our Products
               </span>
 
-              <h1 className="mt-4 text-3xl font-bold leading-tight text-main sm:text-4xl lg:text-5xl">
+              <h1 className="mt-4 text-3xl font-bold leading-tight text-main dark:text-white sm:text-4xl lg:text-5xl">
                 {product.title}
               </h1>
 
-              <div className="mt-5 h-1 w-14 rounded-full bg-main/70" />
+              <div className="mt-5 h-1 w-14 rounded-full bg-main/70 dark:bg-white/70" />
 
-              <p className="mt-6 max-w-xl text-sm leading-8 text-gray-600 sm:text-base">
+              <p className="mt-6 max-w-xl text-sm leading-8 text-muted-foreground sm:text-base">
                 {product.description}
               </p>
               {hasPdf && pdfUrl && (
@@ -112,7 +112,7 @@ export default async function ProductDetailsPage({ params }: Props) {
                     rel="noopener noreferrer"
                     className={cn(
                       buttonVariants({ variant: "ghost" }),
-                      "flex-1 border border-main/80 text-main hover:bg-main/5 sm:flex-none",
+                      "flex-1 border border-main/80 dark:border-white/80 text-main dark:text-white hover:bg-main/5 dark:hover:bg-white/5 sm:flex-none",
                     )}
                   >
                     <FileText className="mr-2 size-4" />
@@ -136,7 +136,7 @@ export default async function ProductDetailsPage({ params }: Props) {
                 href="/our-products"
                 className={cn(
                   buttonVariants({ variant: "outline" }),
-                  "flex-1 border-main/20 bg-white text-main hover:bg-main/5 sm:flex-none",
+                  "flex-1 border-main/20 dark:border-main/80 bg-white dark:bg-transparent text-main hover:bg-main/5 dark:hover:text-main/80 sm:flex-none",
                 )}
               >
                 <ArrowLeft className="mr-2 size-4" />
@@ -160,7 +160,7 @@ export default async function ProductDetailsPage({ params }: Props) {
         {/* Product Overview */}
         {product.longDescription && (
           <Reveal delay={100}>
-            <section className="mt-10 rounded-xl border border-main/10 bg-white p-6 sm:p-8">
+            <section className="mt-10 rounded-xl border border-main/10 dark:border-white/10  bg-white p-6 sm:p-8">
               <div className="grid gap-4 md:grid-cols-[180px_minmax(0,1fr)] md:gap-8">
                 <div>
                   <span className="text-xs font-semibold uppercase tracking-wider text-main/50">
@@ -183,11 +183,11 @@ export default async function ProductDetailsPage({ params }: Props) {
             <Reveal>
               <div className="mb-6 flex flex-wrap items-end justify-between gap-3">
                 <div>
-                  <span className="text-xs font-semibold uppercase tracking-wider text-main/50">
+                  <span className="text-xs font-semibold uppercase tracking-wider text-main/50 dark:text-white/50">
                     Product Details
                   </span>
 
-                  <h2 className="mt-2 text-2xl font-bold text-main">
+                  <h2 className="mt-2 text-2xl font-bold text-main dark:text-white/50">
                     {product.listTitle || "Key Features"}
                   </h2>
                 </div>
