@@ -1,4 +1,3 @@
-
 "use client";
 
 import { productsCard } from "@/app/api/products/productsRoute";
@@ -36,9 +35,8 @@ export default function ProductsSection() {
           </h2>
 
           <p className="text-sm leading-7 text-background/70 dark:text-white/70 md:text-base">
-            Discover our range of innovative products, designed to
-            simplify operations, improve efficiency, and support
-            your business growth.
+            Discover our range of innovative products, designed to simplify
+            operations, improve efficiency, and support your business growth.
           </p>
         </div>
 
@@ -47,7 +45,7 @@ export default function ProductsSection() {
           {productsCard.map((product, index) => (
             <Link
               key={product.id}
-              href={product.href}
+              href={`${product.href}/${product.id}`}
               className="group block h-full outline-none"
             >
               <article
