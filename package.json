@@ -2,6 +2,10 @@
   "name": "dewan-consulting",
   "version": "0.1.0",
   "private": true,
+  "main": "node_modules/next/dist/bin/next",
+  "engines": {
+    "node": "22.x"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
