@@ -99,8 +99,8 @@ export default async function ProductDetailsPage({ params }: Props) {
                     href={pdfUrl}
                     download
                     className={cn(
-                      buttonVariants({ variant: "ghost" }),
-                      "flex-1 border bg-main/90 border-main/10 text-white/90 hover:bg-main hover:text-white sm:flex-none",
+                      buttonVariants({}),
+                      "flex-1 border bg-main/85 dark:bg-white/85 border-main/10 text-white/90 dark:text-main/90 hover:bg-main/90 dark:hover:bg-white/90 hover:text-white sm:flex-none",
                     )}
                   >
                     <Download className="mr-2 size-4" />
@@ -112,7 +112,7 @@ export default async function ProductDetailsPage({ params }: Props) {
                     rel="noopener noreferrer"
                     className={cn(
                       buttonVariants({ variant: "ghost" }),
-                      "flex-1 border border-main/80 dark:border-white/80 text-main dark:text-white hover:bg-main/5 dark:hover:bg-white/5 sm:flex-none",
+                      "flex-1 border border-main/90 dark:border-white/90 text-main dark:text-white hover:bg-main/5 dark:hover:bg-white/5 sm:flex-none",
                     )}
                   >
                     <FileText className="mr-2 size-4" />
