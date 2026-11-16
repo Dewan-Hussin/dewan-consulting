@@ -61,7 +61,7 @@ const themes: ColorTheme[] = [
 const STORAGE_KEY_THEME = "dewan-theme-id";
 const STORAGE_KEY_MODE = "dewan-dark-mode";
 
-const DEFAULT_THEME_ID = "evergreen";
+const DEFAULT_THEME_ID = "espresso";
 
 export default function PalettePanel() {
   const [isOpen, setIsOpen] = useState(false);
