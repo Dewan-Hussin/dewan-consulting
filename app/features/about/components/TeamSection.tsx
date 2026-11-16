@@ -17,7 +17,7 @@ export default function TeamSection() {
         <div className="mb-12 flex flex-wrap items-end justify-between gap-6">
           <div className="max-w-2xl">
             <Reveal>
-              <SectionEyebrow index="006" label="The people" />
+              <SectionEyebrow index="" label="The people" />
             </Reveal>
             <Reveal delay={80}>
               <h2 className="mt-6 text-balance text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">

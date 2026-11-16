@@ -17,10 +17,10 @@ function ImplementationProjectAudit() {
                 <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-main text-white">
                   <BadgeCheck size={21} strokeWidth={1.7} />
                 </span>
-
+{/* 
                 <span className="text-xs font-semibold uppercase tracking-[0.2em] text-main/50">
                   Service 003
-                </span>
+                </span> */}
               </div>
 
               <h2 className="mt-5 text-3xl font-semibold leading-tight tracking-tight text-main sm:text-4xl dark:text-white">

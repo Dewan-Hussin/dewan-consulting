@@ -17,7 +17,7 @@ export default function CtaSection() {
         <div className="mx-auto max-w-3xl text-center">
           <Reveal>
             <div className="flex justify-center">
-              <SectionEyebrow index="007" label="Next step" onDark />
+              <SectionEyebrow index="" label="Next step" onDark />
             </div>
           </Reveal>
 

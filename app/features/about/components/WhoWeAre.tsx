@@ -10,7 +10,7 @@ export default function WhoWeAre() {
       <div className="relative mx-auto flex min-h-svh max-w-7xl flex-col px-4 pb-10 sm:px-6 lg:px-8">
         <div className="flex flex-1 flex-col justify-center gap-7">
           <Reveal>
-            <SectionEyebrow index="001" label="Who we are" />
+            <SectionEyebrow index="" label="Who we are" />
           </Reveal>
 
           <Reveal delay={90}>

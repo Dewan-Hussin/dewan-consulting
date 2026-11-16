@@ -10,7 +10,7 @@ export default function StorySection() {
           {/* copy */}
           <div className="lg:col-span-7">
             <Reveal>
-              <SectionEyebrow index="002" label="Our story" className="text-main" />
+              <SectionEyebrow index="" label="Our story" className="text-main" />
             </Reveal>
             <Reveal delay={80}>
               <h2 className="mt-6 max-w-2xl text-balance text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
@@ -21,7 +21,7 @@ export default function StorySection() {
             <Reveal delay={140}>
               <div className="mt-8 space-y-5 text-pretty text-base leading-relaxed text-main/70 sm:text-lg dark:text-white/60">
                 <p>
-                  Dewan Consulting started in 2000 with one payroll project
+                  Dewan Consulting started in 1987 with one payroll project
                   that everyone else had quietly stopped answering. We finished
                   it on time, then kept improving it long after the contract
                   ended — because payroll does not forgive.

@@ -46,7 +46,7 @@ export default function TimelineSection() {
       <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 md:py-28 lg:px-8">
         <div className="mb-14 max-w-2xl">
           <Reveal>
-            <SectionEyebrow index="005" label="Milestones" />
+            <SectionEyebrow index="" label="Milestones" />
           </Reveal>
           <Reveal delay={80}>
             <h2 className="mt-6 text-balance text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">

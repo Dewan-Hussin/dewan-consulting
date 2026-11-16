@@ -94,7 +94,7 @@ export default function OurTeamPage() {
           {/* Header */}
           <header className="flex flex-col gap-7">
             <Reveal>
-              <SectionEyebrow index="004" label="Our Team" />
+              <SectionEyebrow index="" label="Our Team" />
             </Reveal>
 
             <Reveal delay={90}>

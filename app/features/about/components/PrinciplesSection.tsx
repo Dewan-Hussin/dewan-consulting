@@ -34,7 +34,7 @@ export default function PrinciplesSection() {
           <div className="lg:col-span-4">
             <div className="lg:sticky lg:top-24">
               <Reveal>
-                <SectionEyebrow index="003" label="What we operate by" />
+                <SectionEyebrow index="" label="What we operate by" />
               </Reveal>
               <Reveal delay={80}>
                 <h2 className="mt-6 text-balance text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">

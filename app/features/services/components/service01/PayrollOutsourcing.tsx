@@ -22,9 +22,9 @@ function PayrollOutsourcing() {
                     <Banknote size={21} strokeWidth={1.7} />
                   </span>
 
-                  <span className="text-xs font-semibold uppercase tracking-[0.2em] text-main/50 dark:text-white/50">
+                  {/* <span className="text-xs font-semibold uppercase tracking-[0.2em] text-main/50 dark:text-white/50">
                     Service 001
-                  </span>
+                  </span> */}
                 </div>
 
                 <h2 className="mt-5 text-3xl font-semibold tracking-tight text-main sm:text-4xl dark:text-white">
