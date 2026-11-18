@@ -42,11 +42,3 @@ export default function HeroSection() {
     </>
   );
 }
-
-/* 
-Build a HeroSection background image to a company called "Dewan Consulting" and this company systems are FreightAccount, Payroll System, Time Attendance, Withholding Tax System and HR System, Tailored Projects, Project Management, and General Ledger.
-I just need a HeroSection background image that Reflect this company.
-Do Your Best and Surprise me
-
-
-*/

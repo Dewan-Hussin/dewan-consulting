@@ -15,16 +15,6 @@ export default function AboutUs() {
       aria-labelledby="about-title"
     >
       {/* Decorative background */}
-      {/* <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -right-32 -top-32 h-72 w-72 rounded-full bg-second/10 blur-3xl"
-      />
-
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -bottom-40 -left-32 h-80 w-80 rounded-full bg-white/10 blur-3xl"
-      /> */}
-
       <div
         className={cn(
           "relative mx-auto flex w-full max-w-7xl flex-col gap-12 px-4",

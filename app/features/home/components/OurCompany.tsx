@@ -14,17 +14,6 @@ export default function OurCompany() {
       )}
       aria-labelledby="our-company-title"
     >
-      {/* Decorative background */}
-      {/* <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -left-40 top-1/2 h-96 w-96 -translate-y-1/2 rounded-full bg-second/10 blur-3xl"
-      />
-
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute right-0 top-0 h-64 w-64 rounded-bl-full bg-main/5"
-      /> */}
-
       <div
         className={cn(
           "relative mx-auto grid w-full max-w-7xl items-center gap-12 px-4",
@@ -40,12 +29,6 @@ export default function OurCompany() {
               "sm:p-9 lg:p-10",
             )}
           >
-            {/* Subtle decoration */}
-            {/* <div
-              aria-hidden="true"
-              className="pointer-events-none absolute -right-20 -top-20 h-52 w-52 rounded-full bg-white/5"
-            /> */}
-
             <div className="relative space-y-7">
               {/* Eyebrow */}
               <div className="flex items-center gap-3">
@@ -180,7 +163,9 @@ export default function OurCompany() {
               </div>
 
               <div>
-                <p className="text-xl font-bold leading-none text-main dark:text-white">1987</p>
+                <p className="text-xl font-bold leading-none text-main dark:text-white">
+                  1987
+                </p>
 
                 <p className="mt-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-main/45 dark:text-white/45">
                   Our Beginning
