@@ -13,7 +13,7 @@ export type Product = {
   href: string;
   description: string;
   longDescription?: string;
-  pdfUrl?: string;
+  pdfUrl: string;
   imgUrl: string;
   listTitle?: string;
   list?: string[];
@@ -111,6 +111,7 @@ export const productsCard: Product[] = [
       "The HR system enables you to implement effective competency-based management across the full spectrum of HR.",
     href: "/our-products",
     imgUrl: HRSystem.src,
+    pdfUrl: "",
     longDescription:
       "From Pre-Hire to Retire; a Strategic Human Resource Management that works. The HR System enables you to implement effective competency-based management across the full spectrum of HR, from recruitment, selection and assessment processes, through learning and career development, performance management and succession planning systems. As, the rest of our systems, the HR system is designed as agile as possible and is highly customizable in order to fit our client’s needs.",
   },
@@ -120,6 +121,7 @@ export const productsCard: Product[] = [
     description: "Service provides you a tailored system for your business.",
     href: "/our-products",
     imgUrl: TailoredProjects.src,
+    pdfUrl: "",
     longDescription:
       "Our Tailored Project Implementation Service provides you a tailored system for your business. Simply you come to us and tell us what your needs and your problems while undergoing your business operations and we use our knowledge to make the system that makes your life easier.",
     listTitle: "Features",
@@ -145,6 +147,7 @@ export const productsCard: Product[] = [
       "Implementing a project or buying a system and it’s a little out of your area of expertise, and scared of not being able to control the project! Don’t worry we provide a project management service. This is where we step in and manage the whole project. From finding a good offer, to monitoring the implementation plan and the deadlines of the project delivery and the training sessions required. Thus we relive you from the hazards of monitoring a newly acquired system while guaranteeing satisfactory results in the end.",
     href: "/our-products",
     imgUrl: ProjectManagement.src,
+    pdfUrl: "",
   },
   {
     id: "pCard08",
@@ -155,5 +158,6 @@ export const productsCard: Product[] = [
       "The General Ledger System manages the procedures for accurately entering, tracking, and maintaining information related to an organization’s financial operations. The system is suitable for any organization that needs a general ledger or cashbook provides unparalleled flexibility. All in account balances are calculated dynamically so that the standard accounting reports can be created for any arbitrary date or period without the need for a period close or roll over. General ledger tracks budget and actual financial data to produce financial statements such as an income statement, balance sheet, trial balance and the general ledger detailed report. It also has the ability to be linked to the Freight Account System in order to further simplify the work done by Freight companies.",
     href: "/our-products",
     imgUrl: GeneralLedger.src,
+    pdfUrl: "",
   },
 ];
