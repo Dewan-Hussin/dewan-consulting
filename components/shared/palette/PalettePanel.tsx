@@ -22,11 +22,18 @@ type ColorTheme = {
 
 const themes: ColorTheme[] = [
   {
-    id: "evergreen",
-    name: "Evergreen",
-    main: "#1b3a34",
-    second: "#a8c5b8",
-    accent: "#3d8b6e",
+    id: "midnight",
+    name: "Midnight",
+    main: "#1a2332",
+    second: "#b0c4d8",
+    accent: "#4a7a9b",
+  },
+  {
+    id: "slate",
+    name: "Slate",
+    main: "#252a2e",
+    second: "#c8ccd0",
+    accent: "#5e7080",
   },
   {
     id: "espresso",
@@ -36,13 +43,6 @@ const themes: ColorTheme[] = [
     accent: "#8b6f47",
   },
   {
-    id: "midnight",
-    name: "Midnight",
-    main: "#1a2332",
-    second: "#b0c4d8",
-    accent: "#4a7a9b",
-  },
-  {
     id: "burgundy",
     name: "Burgundy",
     main: "#3a1a24",
@@ -50,18 +50,18 @@ const themes: ColorTheme[] = [
     accent: "#8b4a5e",
   },
   {
-    id: "slate",
-    name: "Slate",
-    main: "#252a2e",
-    second: "#c8ccd0",
-    accent: "#5e7080",
+    id: "evergreen",
+    name: "Evergreen",
+    main: "#1b3a34",
+    second: "#a8c5b8",
+    accent: "#3d8b6e",
   },
 ];
 
 const STORAGE_KEY_THEME = "dewan-theme-id";
 const STORAGE_KEY_MODE = "dewan-dark-mode";
 
-const DEFAULT_THEME_ID = "espresso";
+const DEFAULT_THEME_ID = "midnight";
 
 export default function PalettePanel() {
   const [isOpen, setIsOpen] = useState(false);
