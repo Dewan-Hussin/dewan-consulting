@@ -197,7 +197,7 @@ export default function Navbar() {
                           <div className="overflow-hidden rounded-xl border border-gray-200 bg-white p-2 shadow-xl shadow-black/10 dark:border-white/10 dark:bg-[#1e1e1e]">
                             <div className="px-3 pb-2 pt-1">
                               <p className="text-[10px] font-semibold uppercase tracking-[0.15em] text-gray-400 dark:text-white/40">
-                                Our Services
+                                {link.label === "Services" ? `Our ${link.label}`: link.label}
                               </p>
                             </div>
 
