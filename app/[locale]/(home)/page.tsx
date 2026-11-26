@@ -17,7 +17,7 @@ export default async function HomePage() {
         <AboutUs />
         <ServicesSection />
         <ProductsSection />
-        <ContactUs />
+        {/* <ContactUs /> */}
       </main>
     </>
   );

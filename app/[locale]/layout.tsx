@@ -11,6 +11,7 @@ import { cn } from "@/lib/utils";
 import Navbar from "@/components/shared/navbar/Navbar";
 import PalettePanel from "@/components/shared/palette/PalettePanel";
 import { ThemeScript } from "@/components/shared/palette/ThemeScript";
+import Footer from "@/components/shared/footer/Footer";
 
 const geist = localFont({
   src: [
@@ -97,6 +98,7 @@ export default async function RootLayout({
           <Navbar />
           <PalettePanel />
           {children}
+          {/* <Footer /> */}
         </NextIntlClientProvider>
       </body>
     </html>
